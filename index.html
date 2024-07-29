@@ -23,14 +23,16 @@
         }
         .review-slider {
             display: flex;
-            overflow-x: auto;
-            scroll-behavior: smooth;
+            overflow: hidden;
             position: relative;
-            padding-bottom: 1rem; /* Add space at the bottom */
+        }
+        .review-slider-inner {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
         }
         .review-item {
-            flex: none;
-            width: 300px;
+            flex: 1 0 30%;
+            box-sizing: border-box;
             margin-right: 16px;
             background: #fff;
             padding: 16px;
@@ -43,22 +45,6 @@
         }
         .review-slider::-webkit-scrollbar {
             display: none;
-        }
-        .review-wrapper {
-            display: flex;
-            overflow: hidden;
-            position: relative;
-            width: 100%;
-        }
-        .review-inner {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-            width: 100%;
-        }
-        .review-item {
-            flex: 1 0 30%;
-            box-sizing: border-box;
-            margin-right: 16px;
         }
         header {
             position: sticky;
@@ -140,6 +126,44 @@
                 </form>
             </div>
         </section>
+        <section id="reviews" class="my-8 min-h-screen flex flex-col justify-center">
+            <h2 class="text-3xl font-bold mb-4 text-blue-600">Reviews</h2>
+            <div class="review-slider">
+                <div class="review-slider-inner">
+                    <!-- Review Items -->
+                    <div class="review-item">
+                        <p><strong>John Doe</strong></p>
+                        <p>“Xander is a fantastic developer with a keen eye for detail. His work at Visma was exemplary.”</p>
+                        <div class="flex mt-2">
+                            <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
+                            <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
+                            <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
+                        </div>
+                    </div>
+                    <!-- Add more review items as needed -->
+                    <!-- Review 2 -->
+                    <div class="review-item">
+                        <p><strong>Jane Smith</strong></p>
+                        <p>“Xander’s ability to solve complex problems and deliver robust solutions has always impressed me.”</p>
+                        <div class="flex mt-2">
+                            <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
+                            <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
+                            <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
+                        </div>
+                    </div>
+                    <!-- Review 3 -->
+                    <div class="review-item">
+                        <p><strong>Michael Brown</strong></p>
+                        <p>“Xander’s expertise in DevOps and full-stack development has been a game-changer for our team.”</p>
+                        <div class="flex mt-2">
+                            <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
+                            <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
+                            <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer class="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4">
         <div class="container mx-auto text-center">
@@ -196,41 +220,21 @@
         loadCertificates();
 
         // Automatic review slider
-        let index = 0;
-        const reviews = document.querySelectorAll('.review-item');
+        let currentIndex = 0;
         const reviewInterval = 5000; // Change review every 5 seconds
 
-        function showNextReview() {
-            reviews.forEach((review, i) => {
-                review.style.display = 'none';
-            });
-            index = (index + 1) % reviews.length;
-            reviews[index].style.display = 'block';
+        function updateReviews() {
+            const reviews = document.querySelectorAll('.review-item');
+            const totalReviews = reviews.length;
+            const slideWidth = reviews[0].clientWidth + 16; // Adding margin-right
+
+            if (totalReviews > 0) {
+                currentIndex = (currentIndex + 1) % totalReviews;
+                document.querySelector('.review-slider-inner').style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+            }
         }
 
-        function createReviewSlider() {
-            const reviewWrapper = document.querySelector('.review-wrapper');
-            const reviewInner = document.querySelector('.review-inner');
-            const reviews = Array.from(document.querySelectorAll('.review-item'));
-
-            reviews.forEach((review, i) => {
-                reviewInner.appendChild(review);
-            });
-
-            setInterval(() => {
-                const width = reviewWrapper.clientWidth;
-                const totalWidth = reviewInner.scrollWidth;
-                const maxScroll = totalWidth - width;
-
-                if (reviewInner.scrollLeft < maxScroll) {
-                    reviewInner.scrollLeft += width / 3; // Adjust the scroll increment
-                } else {
-                    reviewInner.scrollLeft = 0;
-                }
-            }, reviewInterval);
-        }
-
-        createReviewSlider();
+        setInterval(updateReviews, reviewInterval);
     </script>
 </body>
 </html>
