@@ -22,12 +22,13 @@
         .cert-img:hover {
             transform: scale(1.05);
         }
-        .review-slider {
-            display: flex;
-            overflow: hidden;
+        .review-carousel {
             position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: auto;
         }
-        .review-slider-inner {
+        .review-carousel-inner {
             display: flex;
             transition: transform 0.5s ease-in-out;
         }
@@ -44,36 +45,19 @@
         .review-item:hover {
             transform: scale(1.02);
         }
-        .review-slider::-webkit-scrollbar {
-            display: none;
-        }
-        .company-slider {
-            display: flex;
-            overflow: hidden;
-            white-space: nowrap;
-            padding: 16px 0;
-        }
-        .company-slider-inner {
+        .review-carousel-inner {
             display: flex;
             align-items: center;
             white-space: nowrap;
             animation: scroll 20s linear infinite;
         }
-        .company-logo {
-            margin-right: 24px;
-            height: 100px;
-        }
         @keyframes scroll {
-            from {
-                transform: translateX(0);
-            }
-            to {
-                transform: translateX(-100%);
-            }
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
         }
-        header {
+        footer {
             position: sticky;
-            top: 0;
+            bottom: 0;
             z-index: 50;
         }
         .star-rating i {
@@ -112,8 +96,8 @@
                     In addition to crafting the front-end and back-end of applications, I specialize in setting up robust development environments 
                     and implementing seamless continuous automatic deployment pipelines. Beyond coding, I believe in ensuring that the applications I work on 
                     are not only technically sound but also align with the needs of both businesses and end-users.</p>
-                    <div class="review-slider">
-                        <div class="review-slider-inner">
+                    <div class="review-carousel">
+                        <div class="review-carousel-inner">
                             <!-- Review Items -->
                             <div class="review-item">
                                 <div class="flex items-center mb-2">
