@@ -38,9 +38,27 @@
             padding: 16px;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .review-item:hover {
+            transform: scale(1.02);
         }
         .review-slider::-webkit-scrollbar {
             display: none;
+        }
+        .review-wrapper {
+            display: flex;
+            overflow: hidden;
+            position: relative;
+        }
+        .review-inner {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .review-item {
+            flex: 1 0 30%;
+            box-sizing: border-box;
+            margin-right: 16px;
         }
     </style>
 </head>
@@ -76,92 +94,96 @@
                     are not only technically sound but also align with the needs of both businesses and end-users.
                 </p>
             </div>
-            <div class="review-slider mt-8">
-                <!-- Reviews -->
-                <div class="review-item">
-                    <p class="font-bold">Jane Doe</p>
-                    <p>"Xander is an exceptional developer with a keen eye for detail. His work ethic and problem-solving skills are unparalleled."</p>
-                    <div class="flex mt-2">
-                        <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
-                        </svg>
-                        <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
-                        </svg>
-                        <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
-                        </svg>
-                        <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
-                        </svg>
-                        <svg class="h-5 w-5 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
-                        </svg>
+            <div class="review-wrapper mt-8">
+                <div class="review-inner">
+                    <!-- Reviews -->
+                    <div class="review-item">
+                        <p class="font-bold">Jane Doe</p>
+                        <p>"Xander is an exceptional developer with a keen eye for detail. His work ethic and problem-solving skills are unparalleled."</p>
+                        <div class="flex mt-2">
+                            <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
+                            </svg>
+                            <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
+                            </svg>
+                            <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
+                            </svg>
+                            <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
+                            </svg>
+                            <svg class="h-5 w-5 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
+                            </svg>
+                        </div>
                     </div>
-                </div>
-                <div class="review-item">
-                    <p class="font-bold">John Smith</p>
-                    <p>"A highly skilled and reliable developer. Xander's expertise in both front-end and back-end development is impressive."</p>
-                    <div class="flex mt-2">
-                        <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
-                        </svg>
-                        <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
-                        </svg>
-                        <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
-                        </svg>
-                        <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
-                        </svg>
-                        <svg class="h-5 w-5 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
-                        </svg>
+                    <div class="review-item">
+                        <p class="font-bold">John Smith</p>
+                        <p>"A highly skilled and reliable developer. Xander's expertise in both front-end and back-end development is impressive."</p>
+                        <div class="flex mt-2">
+                            <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
+                            </svg>
+                            <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
+                            </svg>
+                            <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
+                            </svg>
+                            <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
+                            </svg>
+                            <svg class="h-5 w-5 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
+                            </svg>
+                        </div>
                     </div>
-                </div>
-                <div class="review-item">
-                    <p class="font-bold">Alice Johnson</p>
-                    <p>"A pleasure to work with. Xander brings great technical skills and a positive attitude to every project."</p>
-                    <div class="flex mt-2">
-                        <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
-                        </svg>
-                        <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
-                        </svg>
-                        <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
-                        </svg>
-                        <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
-                        </svg>
-                        <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
-                        </svg>
+                    <div class="review-item">
+                        <p class="font-bold">Alice Johnson</p>
+                        <p>"A pleasure to work with. Xander brings great technical skills and a positive attitude to every project."</p>
+                        <div class="flex mt-2">
+                            <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
+                            </svg>
+                            <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
+                            </svg>
+                            <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
+                            </svg>
+                            <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
+                            </svg>
+                            <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
+                            </svg>
+                        </div>
                     </div>
+                    <!-- Add more reviews as needed -->
                 </div>
-                <!-- Add more reviews as needed -->
             </div>
         </section>
-        <section id="resume" class="my-8 hidden-section">
+        <section id="resume" class="my-8">
             <h2 class="text-3xl font-bold mb-4 text-blue-600">Resume</h2>
-            <div class="bg-white shadow-lg rounded-lg p-6 transition-transform transform hover:scale-105">
-                <h3 class="text-xl font-bold mb-2">Visma</h3>
-                <p class="mb-2"><strong>Position:</strong> Senior Software Developer</p>
-                <p class="mb-2"><strong>Duration:</strong> January 2015 - January 2020</p>
-                <p class="mb-4">At Visma, I worked for five years as a Senior Software Developer, responsible for both front-end and back-end development. 
-                My role involved developing robust solutions and optimizing development and deployment processes.</p>
-                <!-- Add more work experience as needed -->
+            <div class="bg-white shadow-lg rounded-lg p-6 flex items-center space-x-6 transition-transform transform hover:scale-105">
+                <img src="https://avatars.githubusercontent.com/u/26086035?s=200&v=4" alt="Visma Logo" class="w-32 h-auto mb-4" />
+                <div>
+                    <h3 class="text-xl font-bold mb-2">Visma</h3>
+                    <p class="mb-2"><strong>Position:</strong> Senior Software Developer</p>
+                    <p class="mb-2"><strong>Duration:</strong> January 2018 - January 2023</p>
+                    <p class="mb-4">At Visma, I worked for five years as a Senior Software Developer, responsible for both front-end and back-end development. 
+                    My role involved developing robust solutions and optimizing development and deployment processes.</p>
+                </div>
             </div>
         </section>
-        <section id="certificates" class="my-8 hidden-section">
+        <section id="certificates" class="my-8">
             <h2 class="text-3xl font-bold mb-4 text-blue-600">Certificates</h2>
             <div id="certificates-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Certificates will be dynamically added here -->
             </div>
         </section>
-        <section id="contact" class="my-8 hidden-section">
+        <section id="contact" class="my-8">
             <h2 class="text-3xl font-bold mb-4 text-blue-600">Contact</h2>
             <div class="bg-white shadow-lg rounded-lg p-6">
                 <p class="mb-4">For any questions or to get in touch, please fill out the contact form below.</p>
@@ -208,18 +230,13 @@
         // Example certificates data (you can add more certificates or modify as needed)
         const certificates = [
             'https://www.sololearn.com/Certificate/CT-6TSFYX30/pdf',
-            'https://www.sololearn.com/Certificate/CT-6TSFYX30/pdf',
-            'https://www.sololearn.com/Certificate/CT-6TSFYX30/pdf'
-            // Add more certificate URLs here as needed
+            'https://www.sololearn.com/Certificate/CT-6TSFYX30/pdf' // Add more as needed
         ];
 
-        // Function to load and display certificate thumbnails
         function loadCertificates() {
             const container = document.getElementById('certificates-container');
             certificates.forEach(url => {
-                // Placeholder thumbnail image
-                const thumbnailUrl = 'https://via.placeholder.com/400x300.png?text=Certificate+Thumbnail';
-                
+                const thumbnailUrl = 'https://via.placeholder.com/300x200.png?text=Certificate+Thumbnail';
                 const certDiv = document.createElement('div');
                 certDiv.className = 'bg-white shadow-lg rounded-lg overflow-hidden';
                 
@@ -254,7 +271,7 @@
         }
 
         reviews.forEach((review, i) => {
-            review.style.display = i === index ? 'block' : 'none';
+            review.style.display = i < 3 ? 'block' : 'none'; // Show the first 3 reviews
         });
 
         setInterval(showNextReview, reviewInterval);
