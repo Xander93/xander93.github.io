@@ -6,6 +6,7 @@
     <title>Xander de Groot's Personal Website</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <style>
         .profile-img {
             border-radius: 50%;
@@ -22,39 +23,6 @@
         .cert-img:hover {
             transform: scale(1.05);
         }
-        .review-carousel {
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-            height: auto;
-        }
-        .review-carousel-inner {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-        .review-item {
-            flex: 1 0 30%;
-            box-sizing: border-box;
-            margin-right: 16px;
-            background: #fff;
-            padding: 16px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-        .review-item:hover {
-            transform: scale(1.02);
-        }
-        .review-carousel-inner {
-            display: flex;
-            align-items: center;
-            white-space: nowrap;
-            animation: scroll 20s linear infinite;
-        }
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-100%); }
-        }
         footer {
             position: sticky;
             bottom: 0;
@@ -63,6 +31,9 @@
         .star-rating i {
             color: gold;
             margin-right: 2px;
+        }
+        .min-h-screen {
+            min-height: 100vh;
         }
     </style>
 </head>
@@ -96,10 +67,15 @@
                     In addition to crafting the front-end and back-end of applications, I specialize in setting up robust development environments 
                     and implementing seamless continuous automatic deployment pipelines. Beyond coding, I believe in ensuring that the applications I work on 
                     are not only technically sound but also align with the needs of both businesses and end-users.</p>
-                    <div class="review-carousel">
-                        <div class="review-carousel-inner">
-                            <!-- Review Items -->
-                            <div class="review-item">
+                </div>
+            </div>
+            <div class="my-8">
+                <h3 class="text-2xl font-bold mb-4 text-blue-600">What People Say</h3>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <!-- Review Items -->
+                        <div class="swiper-slide">
+                            <div class="review-item bg-white shadow-lg rounded-lg p-6 mb-4">
                                 <div class="flex items-center mb-2">
                                     <span class="star-rating">
                                         <i class="fas fa-star"></i>
@@ -112,7 +88,9 @@
                                 <p><strong>John Doe</strong></p>
                                 <p>“Xander is a fantastic developer with a keen eye for detail. His work at Visma was exemplary.”</p>
                             </div>
-                            <div class="review-item">
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="review-item bg-white shadow-lg rounded-lg p-6 mb-4">
                                 <div class="flex items-center mb-2">
                                     <span class="star-rating">
                                         <i class="fas fa-star"></i>
@@ -125,7 +103,9 @@
                                 <p><strong>Jane Smith</strong></p>
                                 <p>“Xander’s ability to solve complex problems and deliver robust solutions has always impressed me.”</p>
                             </div>
-                            <div class="review-item">
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="review-item bg-white shadow-lg rounded-lg p-6 mb-4">
                                 <div class="flex items-center mb-2">
                                     <span class="star-rating">
                                         <i class="fas fa-star"></i>
@@ -138,7 +118,9 @@
                                 <p><strong>Michael Brown</strong></p>
                                 <p>“Xander’s expertise in DevOps and full-stack development has been a game-changer for our team.”</p>
                             </div>
-                            <div class="review-item">
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="review-item bg-white shadow-lg rounded-lg p-6 mb-4">
                                 <div class="flex items-center mb-2">
                                     <span class="star-rating">
                                         <i class="fas fa-star"></i>
@@ -153,10 +135,15 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- Add Navigation -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
             </div>
         </section>
-        <section id="resume" class="my-8">
+        <section id="resume" class="my-8 min-h-screen">
             <h2 class="text-3xl font-bold mb-4 text-blue-600">Resume</h2>
             <div class="bg-white shadow-lg rounded-lg p-6">
                 <h3 class="text-2xl font-semibold mb-4">Professional Experience</h3>
@@ -171,7 +158,7 @@
                 <!-- Voeg hier andere werkervaringen of opleidingen toe -->
             </div>
         </section>
-        <section id="certificates" class="my-8">
+        <section id="certificates" class="my-8 min-h-screen">
             <h2 class="text-3xl font-bold mb-4 text-blue-600">Certificates</h2>
             <div class="flex flex-wrap">
                 <!-- Certificaat 1 -->
@@ -187,7 +174,7 @@
                 <!-- Voeg hier meer certificaten toe -->
             </div>
         </section>
-        <section id="contact" class="my-8">
+        <section id="contact" class="my-8 min-h-screen">
             <h2 class="text-3xl font-bold mb-4 text-blue-600">Contact</h2>
             <div class="bg-white shadow-lg rounded-lg p-6">
                 <form action="#" method="post">
@@ -213,7 +200,27 @@
             <p>&copy; 2024 Xander de Groot. All rights reserved.</p>
         </div>
     </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
+        // Initialize Swiper
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
         // Script voor menu toggle op mobiele apparaten
         document.getElementById('menu-toggle').addEventListener('click', function() {
             var menu = document.getElementById('menu');
