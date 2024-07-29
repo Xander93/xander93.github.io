@@ -85,14 +85,8 @@
         </section>
         <section id="certificates" class="my-8 hidden-section">
             <h2 class="text-3xl font-bold mb-4 text-blue-600">Certificates</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Certificate 1 -->
-                <div class="bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105">
-                    <a href="https://www.sololearn.com/Certificate/CT-6TSFYX30/pdf" target="_blank">
-                        <img src="https://www.sololearn.com/Certificate/CT-6TSFYX30/pdf" alt="Certificate 1" class="cert-img" />
-                    </a>
-                </div>
-                <!-- Voeg meer certificaten toe zoals nodig -->
+            <div id="certificates-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Certificates will be dynamically inserted here -->
             </div>
         </section>
         <section id="contact" class="my-8 hidden-section">
@@ -138,6 +132,50 @@
                 });
             });
         });
+
+        // Example certificates data (you can add or modify these dynamically)
+        const certificates = [
+            'https://www.sololearn.com/Certificate/CT-6TSFYX30/pdf',
+            'https://www.sololearn.com/Certificate/CT-6TSFYX30/pdf',
+            'https://www.sololearn.com/Certificate/CT-6TSFYX30/pdf'
+            // Add more certificate URLs here if needed
+        ];
+
+        // Function to fetch and display certificate thumbnails
+        function loadCertificates() {
+            const container = document.getElementById('certificates-container');
+            certificates.forEach(url => {
+                fetchThumbnail(url).then(thumbnailUrl => {
+                    const certDiv = document.createElement('div');
+                    certDiv.className = 'bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105';
+                    certDiv.innerHTML = `
+                        <a href="${url}" target="_blank">
+                            <img src="${thumbnailUrl}" alt="Certificate" class="cert-img" />
+                        </a>
+                    `;
+                    container.appendChild(certDiv);
+                });
+            });
+        }
+
+        // Function to fetch a thumbnail image from a PDF-to-Image API
+        async function fetchThumbnail(pdfUrl) {
+            // Replace with actual API URL and API Key if needed
+            const apiKey = 'YOUR_API_KEY';
+            const apiUrl = `https://api.example.com/pdf-to-image?url=${encodeURIComponent(pdfUrl)}&apikey=${apiKey}`;
+            
+            try {
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+                return data.thumbnailUrl; // Adjust based on actual API response
+            } catch (error) {
+                console.error('Error fetching thumbnail:', error);
+                return 'https://via.placeholder.com/400x300.png?text=Thumbnail+Unavailable'; // Fallback
+            }
+        }
+
+        // Load certificates on page load
+        document.addEventListener('DOMContentLoaded', loadCertificates);
 
         // Show the "About" section by default
         document.getElementById('about').classList.remove('hidden-section');
