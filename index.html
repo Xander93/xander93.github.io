@@ -36,12 +36,32 @@
         }
 
         @keyframes scroll {
-            from {
+            0% {
                 transform: translateX(0);
             }
-            to {
+            100% {
                 transform: translateX(-100%);
             }
+        }
+
+        .carousel-wrapper {
+            overflow: hidden;
+        }
+
+        .carousel-inner {
+            display: flex;
+            width: calc(100% * 3); /* Adjust according to number of items */
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-item {
+            flex: 0 0 100%; /* Adjust to show multiple items if needed */
+        }
+
+        .carousel-inner {
+            display: flex;
+            width: 300%; /* Adjust according to number of items */
+            transition: transform 0.5s ease;
         }
     </style>
 </head>
@@ -54,7 +74,6 @@
                 <li><a href="#resume" class="hover:underline">Resume</a></li>
                 <li><a href="#certificates" class="hover:underline">Certificates</a></li>
                 <li><a href="#contact" class="hover:underline">Contact</a></li>
-                <li><a href="#companies" class="hover:underline">Companies</a></li>
             </ul>
         </nav>
     </header>
@@ -70,41 +89,43 @@
                 </div>
                 <div class="review-slider mt-8">
                     <h2 class="text-3xl font-bold mb-4 text-blue-600">Reviews</h2>
-                    <div class="review-slider-inner flex">
-                        <div class="review-item bg-white p-4 rounded-lg shadow-lg">
-                            <p><strong>John Doe</strong></p>
-                            <p>“Xander is a highly skilled developer with a knack for solving complex problems.”</p>
-                            <div class="flex mt-2">
-                                <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
-                                <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
-                                <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
+                    <div class="carousel-wrapper">
+                        <div class="carousel-inner review-slider-inner">
+                            <div class="review-item bg-white p-4 rounded-lg shadow-lg">
+                                <p><strong>John Doe</strong></p>
+                                <p>“Xander is a highly skilled developer with a knack for solving complex problems.”</p>
+                                <div class="flex mt-2">
+                                    <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
+                                    <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
+                                    <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
+                                </div>
                             </div>
-                        </div>
-                        <div class="review-item bg-white p-4 rounded-lg shadow-lg">
-                            <p><strong>Michael Brown</strong></p>
-                            <p>“Xander’s expertise in DevOps and full-stack development has been a game-changer for our team.”</p>
-                            <div class="flex mt-2">
-                                <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
-                                <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
-                                <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
+                            <div class="review-item bg-white p-4 rounded-lg shadow-lg">
+                                <p><strong>Michael Brown</strong></p>
+                                <p>“Xander’s expertise in DevOps and full-stack development has been a game-changer for our team.”</p>
+                                <div class="flex mt-2">
+                                    <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
+                                    <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
+                                    <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
+                                </div>
                             </div>
-                        </div>
-                        <div class="review-item bg-white p-4 rounded-lg shadow-lg">
-                            <p><strong>Alice Johnson</strong></p>
-                            <p>“Xander’s dedication to continuous improvement and his innovative mindset make him a valuable asset.”</p>
-                            <div class="flex mt-2">
-                                <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
-                                <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
-                                <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
+                            <div class="review-item bg-white p-4 rounded-lg shadow-lg">
+                                <p><strong>Alice Johnson</strong></p>
+                                <p>“Xander’s dedication to continuous improvement and his innovative mindset make him stand out.”</p>
+                                <div class="flex mt-2">
+                                    <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
+                                    <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
+                                    <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
+                                </div>
                             </div>
-                        </div>
-                        <div class="review-item bg-white p-4 rounded-lg shadow-lg">
-                            <p><strong>Emma Wilson</strong></p>
-                            <p>“Highly recommended for his technical skills and collaborative approach.”</p>
-                            <div class="flex mt-2">
-                                <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
-                                <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
-                                <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
+                            <div class="review-item bg-white p-4 rounded-lg shadow-lg">
+                                <p><strong>Emma Wilson</strong></p>
+                                <p>“Highly recommended for his technical skills and collaborative approach.”</p>
+                                <div class="flex mt-2">
+                                    <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
+                                    <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
+                                    <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -146,25 +167,24 @@
                 </form>
             </div>
         </section>
-
-        <section id="companies" class="section bg-gray-100 py-12">
-            <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold mb-4 text-blue-600">Companies I've Worked For</h2>
-                <div class="company-slider">
-                    <div class="company-slider-inner">
-                        <img src="https://avatars.githubusercontent.com/u/26086035?s=200&v=4" alt="Visma Logo" class="company-logo"/>
-                        <!-- Add more company logos as needed -->
-                        <img src="https://via.placeholder.com/100x100.png?text=Company+Logo" alt="Company Logo" class="company-logo"/>
-                        <img src="https://via.placeholder.com/100x100.png?text=Company+Logo" alt="Company Logo" class="company-logo"/>
-                        <img src="https://via.placeholder.com/100x100.png?text=Company+Logo" alt="Company Logo" class="company-logo"/>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
-    <footer class="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 text-center">
+
+    <div class="fixed bottom-0 left-0 w-full bg-gray-200 py-4 overflow-hidden">
+        <div class="company-slider">
+            <div class="company-slider-inner">
+                <img src="https://avatars.githubusercontent.com/u/26086035?s=200&v=4" alt="Visma Logo" class="company-logo"/>
+                <img src="https://via.placeholder.com/100x100.png?text=Company+Logo" alt="Company Logo" class="company-logo"/>
+                <img src="https://via.placeholder.com/100x100.png?text=Company+Logo" alt="Company Logo" class="company-logo"/>
+                <img src="https://via.placeholder.com/100x100.png?text=Company+Logo" alt="Company Logo" class="company-logo"/>
+                <!-- Repeat logos as needed -->
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 text-center mt-12">
         <p>&copy; 2024 Xander de Groot</p>
     </footer>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Contact form submission
@@ -212,15 +232,18 @@
 
             function populateCompanies() {
                 const companies = [
-                    "https://avatars.githubusercontent.com/u/26086035?s=200&v=4", // Visma
-                    "https://via.placeholder.com/100x100.png?text=Company+Logo", // Add more logos as needed
+                    "https://avatars.githubusercontent.com/u/26086035?s=200&v=4",
+                    "https://via.placeholder.com/100x100.png?text=Company+Logo",
+                    "https://via.placeholder.com/100x100.png?text=Company+Logo",
+                    "https://via.placeholder.com/100x100.png?text=Company+Logo",
+                    // Add more logos as needed
                 ];
 
-                companies.forEach(logoUrl => {
+                companies.forEach(src => {
                     const img = document.createElement('img');
-                    img.src = logoUrl;
-                    img.alt = "Company Logo";
-                    img.className = "company-logo";
+                    img.src = src;
+                    img.alt = 'Company Logo';
+                    img.className = 'company-logo';
                     companySliderInner.appendChild(img);
                 });
             }
