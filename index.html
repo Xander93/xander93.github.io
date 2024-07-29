@@ -15,6 +15,15 @@
             height: 150px;
             object-fit: cover;
         }
+        .cert-img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        .cert-img:hover {
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-900 flex flex-col min-h-screen">
@@ -30,6 +39,7 @@
                 <ul id="menu" class="hidden lg:flex lg:items-center lg:space-x-6">
                     <li><a href="#" data-section="about" class="text-white hover:text-gray-300 transition duration-300">About</a></li>
                     <li><a href="#" data-section="portfolio" class="text-white hover:text-gray-300 transition duration-300">Portfolio</a></li>
+                    <li><a href="#" data-section="certificates" class="text-white hover:text-gray-300 transition duration-300">Certificates</a></li>
                     <li><a href="#" data-section="contact" class="text-white hover:text-gray-300 transition duration-300">Contact</a></li>
                 </ul>
             </nav>
@@ -71,6 +81,18 @@
                     <a href="#" class="text-blue-600 hover:underline transition duration-300">Bekijk project</a>
                 </div>
                 <!-- Voeg meer projecten toe zoals nodig -->
+            </div>
+        </section>
+        <section id="certificates" class="my-8 hidden-section">
+            <h2 class="text-3xl font-bold mb-4 text-blue-600">Certificates</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Certificate 1 -->
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105">
+                    <a href="https://www.sololearn.com/Certificate/CT-6TSFYX30/pdf" target="_blank">
+                        <img src="https://www.sololearn.com/Certificate/CT-6TSFYX30/pdf" alt="Certificate 1" class="cert-img" />
+                    </a>
+                </div>
+                <!-- Voeg meer certificaten toe zoals nodig -->
             </div>
         </section>
         <section id="contact" class="my-8 hidden-section">
