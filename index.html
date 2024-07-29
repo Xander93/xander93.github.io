@@ -6,27 +6,24 @@
     <title>Xander de Groot</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
+        .carousel-wrapper {
+            overflow: hidden;
         }
 
-        .section {
-            min-height: 100vh; /* Full viewport height */
-        }
-
-        .review-slider-inner {
+        .carousel-inner {
             display: flex;
+            width: 100%;
             transition: transform 0.5s ease-in-out;
         }
 
-        .review-item {
+        .carousel-item {
             min-width: 300px;
             margin-right: 20px;
         }
 
         .company-slider-inner {
             display: flex;
+            white-space: nowrap;
             animation: scroll 20s linear infinite;
         }
 
@@ -36,32 +33,18 @@
         }
 
         @keyframes scroll {
-            0% {
+            from {
                 transform: translateX(0);
             }
-            100% {
+            to {
                 transform: translateX(-100%);
             }
         }
 
-        .carousel-wrapper {
-            overflow: hidden;
-        }
-
-        .carousel-inner {
+        .section {
+            min-height: 100vh; /* Full viewport height */
             display: flex;
-            width: calc(100% * 3); /* Adjust according to number of items */
-            transition: transform 0.5s ease;
-        }
-
-        .carousel-item {
-            flex: 0 0 100%; /* Adjust to show multiple items if needed */
-        }
-
-        .carousel-inner {
-            display: flex;
-            width: 300%; /* Adjust according to number of items */
-            transition: transform 0.5s ease;
+            align-items: center;
         }
     </style>
 </head>
@@ -77,6 +60,7 @@
             </ul>
         </nav>
     </header>
+
     <main class="pt-16">
         <section id="about" class="section bg-gray-100 py-12">
             <div class="container mx-auto px-4">
@@ -87,11 +71,11 @@
                         <p class="text-lg mb-4">I am a Lead Software Developer with a strong background in Full Stack Development and DevOps. I am passionate about creating innovative solutions that bridge the gap between development and production. In addition to crafting the front-end and back-end of applications, I specialize in setting up robust development environments and implementing seamless continuous automatic deployment pipelines. Beyond coding, I believe in ensuring that the applications I work on are not only technically sound, but also align with the needs of both businesses and end-users.</p>
                     </div>
                 </div>
-                <div class="review-slider mt-8">
+                <div class="mt-8">
                     <h2 class="text-3xl font-bold mb-4 text-blue-600">Reviews</h2>
                     <div class="carousel-wrapper">
-                        <div class="carousel-inner review-slider-inner">
-                            <div class="review-item bg-white p-4 rounded-lg shadow-lg">
+                        <div class="carousel-inner">
+                            <div class="carousel-item bg-white p-4 rounded-lg shadow-lg">
                                 <p><strong>John Doe</strong></p>
                                 <p>“Xander is a highly skilled developer with a knack for solving complex problems.”</p>
                                 <div class="flex mt-2">
@@ -100,33 +84,7 @@
                                     <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
                                 </div>
                             </div>
-                            <div class="review-item bg-white p-4 rounded-lg shadow-lg">
-                                <p><strong>Michael Brown</strong></p>
-                                <p>“Xander’s expertise in DevOps and full-stack development has been a game-changer for our team.”</p>
-                                <div class="flex mt-2">
-                                    <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
-                                    <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
-                                    <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
-                                </div>
-                            </div>
-                            <div class="review-item bg-white p-4 rounded-lg shadow-lg">
-                                <p><strong>Alice Johnson</strong></p>
-                                <p>“Xander’s dedication to continuous improvement and his innovative mindset make him stand out.”</p>
-                                <div class="flex mt-2">
-                                    <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
-                                    <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
-                                    <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
-                                </div>
-                            </div>
-                            <div class="review-item bg-white p-4 rounded-lg shadow-lg">
-                                <p><strong>Emma Wilson</strong></p>
-                                <p>“Highly recommended for his technical skills and collaborative approach.”</p>
-                                <div class="flex mt-2">
-                                    <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
-                                    <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
-                                    <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
-                                </div>
-                            </div>
+                            <!-- Add more review items as needed -->
                         </div>
                     </div>
                 </div>
@@ -170,8 +128,8 @@
     </main>
 
     <div class="fixed bottom-0 left-0 w-full bg-gray-200 py-4 overflow-hidden">
-        <div class="company-slider">
-            <div class="company-slider-inner">
+        <div class="carousel-wrapper">
+            <div class="carousel-inner company-slider-inner">
                 <img src="https://avatars.githubusercontent.com/u/26086035?s=200&v=4" alt="Visma Logo" class="company-logo"/>
                 <img src="https://via.placeholder.com/100x100.png?text=Company+Logo" alt="Company Logo" class="company-logo"/>
                 <img src="https://via.placeholder.com/100x100.png?text=Company+Logo" alt="Company Logo" class="company-logo"/>
@@ -194,7 +152,7 @@
             });
 
             // Reviews carousel
-            const reviewSliderInner = document.querySelector('.review-slider-inner');
+            const reviewSliderInner = document.querySelector('.carousel-inner');
             let index = 0;
 
             function nextSlide() {
@@ -221,7 +179,7 @@
                 certDiv.className = 'bg-white p-4 rounded-lg shadow-lg';
                 certDiv.innerHTML = `
                     <a href="${url}" target="_blank">
-                        <img src="https://via.placeholder.com/600x400.png?text=Certificate+Thumbnail" alt="Certificate Thumbnail" class="cert-img"/>
+                        <img src="https://via.placeholder.com/600x400.png?text=Certificate+Thumbnail" alt="Certificate Thumbnail" class="w-full h-auto"/>
                     </a>
                 `;
                 certificatesContainer.appendChild(certDiv);
