@@ -6,9 +6,6 @@
     <title>Xander de Groot's Personal Website</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        .hidden-section {
-            display: none;
-        }
         .profile-img {
             border-radius: 50%;
             width: 150px;
@@ -29,6 +26,7 @@
             overflow-x: auto;
             scroll-behavior: smooth;
             position: relative;
+            padding-bottom: 1rem; /* Add space at the bottom */
         }
         .review-item {
             flex: none;
@@ -50,20 +48,27 @@
             display: flex;
             overflow: hidden;
             position: relative;
+            width: 100%;
         }
         .review-inner {
             display: flex;
             transition: transform 0.5s ease-in-out;
+            width: 100%;
         }
         .review-item {
             flex: 1 0 30%;
             box-sizing: border-box;
             margin-right: 16px;
         }
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-900 flex flex-col min-h-screen">
-    <header class="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 shadow-md">
+    <header class="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 shadow-md sticky top-0 z-50">
         <div class="container mx-auto flex justify-between items-center">
             <a href="#about" class="text-3xl font-bold hover:underline">Xander de Groot</a>
             <nav>
@@ -82,7 +87,7 @@
         </div>
     </header>
     <main class="container mx-auto p-4 flex-grow">
-        <section id="about" class="my-8">
+        <section id="about" class="my-8 min-h-screen flex flex-col justify-center">
             <h2 class="text-3xl font-bold mb-4 text-blue-600">About Me</h2>
             <div class="bg-white shadow-lg rounded-lg p-6 flex items-center space-x-6 transition-transform transform hover:scale-105">
                 <img src="https://avatars.githubusercontent.com/u/9315769?v=4" alt="Xander de Groot" class="profile-img border-4 border-blue-500" />
@@ -94,77 +99,8 @@
                     are not only technically sound but also align with the needs of both businesses and end-users.
                 </p>
             </div>
-            <div class="review-wrapper mt-8">
-                <div class="review-inner">
-                    <!-- Reviews -->
-                    <div class="review-item">
-                        <p class="font-bold">Jane Doe</p>
-                        <p>"Xander is an exceptional developer with a keen eye for detail. His work ethic and problem-solving skills are unparalleled."</p>
-                        <div class="flex mt-2">
-                            <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
-                            </svg>
-                            <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
-                            </svg>
-                            <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
-                            </svg>
-                            <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
-                            </svg>
-                            <svg class="h-5 w-5 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="review-item">
-                        <p class="font-bold">John Smith</p>
-                        <p>"A highly skilled and reliable developer. Xander's expertise in both front-end and back-end development is impressive."</p>
-                        <div class="flex mt-2">
-                            <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
-                            </svg>
-                            <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
-                            </svg>
-                            <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
-                            </svg>
-                            <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
-                            </svg>
-                            <svg class="h-5 w-5 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="review-item">
-                        <p class="font-bold">Alice Johnson</p>
-                        <p>"A pleasure to work with. Xander brings great technical skills and a positive attitude to every project."</p>
-                        <div class="flex mt-2">
-                            <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
-                            </svg>
-                            <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
-                            </svg>
-                            <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
-                            </svg>
-                            <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
-                            </svg>
-                            <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <!-- Add more reviews as needed -->
-                </div>
-            </div>
         </section>
-        <section id="resume" class="my-8">
+        <section id="resume" class="my-8 min-h-screen flex flex-col justify-center">
             <h2 class="text-3xl font-bold mb-4 text-blue-600">Resume</h2>
             <div class="bg-white shadow-lg rounded-lg p-6 flex items-center space-x-6 transition-transform transform hover:scale-105">
                 <img src="https://avatars.githubusercontent.com/u/26086035?s=200&v=4" alt="Visma Logo" class="w-32 h-auto mb-4" />
@@ -177,13 +113,13 @@
                 </div>
             </div>
         </section>
-        <section id="certificates" class="my-8">
+        <section id="certificates" class="my-8 min-h-screen flex flex-col justify-center">
             <h2 class="text-3xl font-bold mb-4 text-blue-600">Certificates</h2>
             <div id="certificates-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Certificates will be dynamically added here -->
             </div>
         </section>
-        <section id="contact" class="my-8">
+        <section id="contact" class="my-8 min-h-screen flex flex-col justify-center">
             <h2 class="text-3xl font-bold mb-4 text-blue-600">Contact</h2>
             <div class="bg-white shadow-lg rounded-lg p-6">
                 <p class="mb-4">For any questions or to get in touch, please fill out the contact form below.</p>
@@ -222,7 +158,9 @@
                 e.preventDefault();
                 const sectionId = this.getAttribute('href').substring(1);
                 document.querySelectorAll('main section').forEach(section => {
-                    section.classList.toggle('hidden-section', section.id !== sectionId);
+                    if (section.id === sectionId) {
+                        section.scrollIntoView({ behavior: 'smooth' });
+                    }
                 });
             });
         });
@@ -270,12 +208,29 @@
             reviews[index].style.display = 'block';
         }
 
-        reviews.forEach((review, i) => {
-            review.style.display = i < 3 ? 'block' : 'none'; // Show the first 3 reviews
-        });
+        function createReviewSlider() {
+            const reviewWrapper = document.querySelector('.review-wrapper');
+            const reviewInner = document.querySelector('.review-inner');
+            const reviews = Array.from(document.querySelectorAll('.review-item'));
 
-        setInterval(showNextReview, reviewInterval);
+            reviews.forEach((review, i) => {
+                reviewInner.appendChild(review);
+            });
 
+            setInterval(() => {
+                const width = reviewWrapper.clientWidth;
+                const totalWidth = reviewInner.scrollWidth;
+                const maxScroll = totalWidth - width;
+
+                if (reviewInner.scrollLeft < maxScroll) {
+                    reviewInner.scrollLeft += width / 3; // Adjust the scroll increment
+                } else {
+                    reviewInner.scrollLeft = 0;
+                }
+            }, reviewInterval);
+        }
+
+        createReviewSlider();
     </script>
 </body>
 </html>
