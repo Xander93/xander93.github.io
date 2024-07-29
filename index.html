@@ -3,47 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xander de Groot's Personal Webpage</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Xander de Groot's Personal Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* General Styles */
-        body {
+        html {
             scroll-behavior: smooth;
         }
-
-        .section {
-            min-height: 100vh; /* Full viewport height */
-            display: flex;
-            align-items: center;
+        .profile-img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
         }
-
-        /* Carousel Styles */
-        .carousel-wrapper {
-            overflow: hidden;
-        }
-
-        .carousel-inner {
-            display: flex;
+        .cert-img {
             width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        .cert-img:hover {
+            transform: scale(1.05);
+        }
+        .review-slider {
+            display: flex;
+            overflow: hidden;
+            position: relative;
+        }
+        .review-slider-inner {
+            display: flex;
             transition: transform 0.5s ease-in-out;
         }
-
-        .carousel-item {
-            min-width: 300px;
-            margin-right: 20px;
+        .review-item {
+            flex: 1 0 30%;
+            box-sizing: border-box;
+            margin-right: 16px;
+            background: #fff;
+            padding: 16px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
-
+        .review-item:hover {
+            transform: scale(1.02);
+        }
+        .review-slider::-webkit-scrollbar {
+            display: none;
+        }
+        .company-slider {
+            display: flex;
+            overflow: hidden;
+            white-space: nowrap;
+            padding: 16px 0;
+        }
         .company-slider-inner {
             display: flex;
+            align-items: center;
             white-space: nowrap;
             animation: scroll 20s linear infinite;
         }
-
         .company-logo {
-            width: 100px;
-            margin-right: 20px;
+            margin-right: 24px;
+            height: 100px;
         }
-
         @keyframes scroll {
             from {
                 transform: translateX(0);
@@ -52,12 +73,21 @@
                 transform: translateX(-100%);
             }
         }
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: linear-gradient(to right, #4f46e5, #a78bfa);
+        }
+        section {
+            padding: 4rem 0;
+        }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-900 flex flex-col min-h-screen">
-    <header class="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 shadow-md fixed w-full top-0 left-0 z-50">
+    <header class="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 shadow-md sticky top-0 z-50">
         <div class="container mx-auto flex justify-between items-center">
-            <a href="#about" class="text-3xl font-bold">Xander de Groot</a>
+            <a href="#about" class="text-3xl font-bold hover:underline">Xander de Groot</a>
             <nav>
                 <button id="menu-toggle" class="block lg:hidden text-white focus:outline-none">
                     <svg class="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -73,149 +103,74 @@
             </nav>
         </div>
     </header>
-
-    <main class="pt-16 flex-grow">
-        <section id="about" class="section bg-white py-12">
-            <div class="container mx-auto px-4">
-                <div class="flex flex-col md:flex-row items-center">
-                    <img src="https://avatars.githubusercontent.com/u/9315769?v=4" alt="Xander de Groot" class="w-32 h-32 rounded-full mb-4 md:mb-0 md:mr-8"/>
-                    <div>
-                        <h2 class="text-3xl font-bold mb-4 text-blue-600">About Me</h2>
-                        <p class="text-lg mb-4">I am a Lead Software Developer with a strong background in Full Stack Development and DevOps. I am passionate about creating innovative solutions that bridge the gap between development and production. In addition to crafting the front-end and back-end of applications, I specialize in setting up robust development environments and implementing seamless continuous automatic deployment pipelines. Beyond coding, I believe in ensuring that the applications I work on are not only technically sound but also align with the needs of both businesses and end-users.</p>
+    <main class="container mx-auto p-4 flex-grow">
+        <section id="about" class="my-8 min-h-screen flex flex-col justify-center">
+            <h2 class="text-3xl font-bold mb-4 text-blue-600">About Me</h2>
+            <div class="bg-white shadow-lg rounded-lg p-6 flex flex-col md:flex-row items-center space-x-6 transition-transform transform hover:scale-105">
+                <img src="https://avatars.githubusercontent.com/u/9315769?v=4" alt="Xander de Groot" class="profile-img border-4 border-blue-500" />
+                <div class="text-lg">
+                    <p>Hello! I'm Xander de Groot, a passionate developer with experience in full-stack web development. I love working on projects that make a difference and am always eager to learn new technologies.</p>
+                </div>
+            </div>
+        </section>
+        <section id="resume" class="my-8">
+            <h2 class="text-3xl font-bold mb-4 text-blue-600">Resume</h2>
+            <p>Check out my <a href="#" class="text-blue-500 hover:underline">full resume</a> for more details about my professional experience and skills.</p>
+        </section>
+        <section id="certificates" class="my-8">
+            <h2 class="text-3xl font-bold mb-4 text-blue-600">Certificates</h2>
+            <div id="certificates-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"></div>
+        </section>
+        <section id="reviews" class="my-8">
+            <h2 class="text-3xl font-bold mb-4 text-blue-600">Reviews</h2>
+            <div class="review-slider">
+                <div class="review-slider-inner">
+                    <div class="review-item">
+                        <p>"Great work and attention to detail. Highly recommend!"</p>
+                        <p>- Client A</p>
+                    </div>
+                    <div class="review-item">
+                        <p>"A pleasure to work with. Delivered on time and exceeded expectations."</p>
+                        <p>- Client B</p>
+                    </div>
+                    <div class="review-item">
+                        <p>"Excellent communication and professional skills. Will work with again."</p>
+                        <p>- Client C</p>
                     </div>
                 </div>
-                <div class="mt-8">
-                    <h2 class="text-3xl font-bold mb-4 text-blue-600">Reviews</h2>
-                    <div class="carousel-wrapper">
-                        <div class="carousel-inner">
-                            <div class="carousel-item bg-white p-4 rounded-lg shadow-lg">
-                                <p><strong>John Doe</strong></p>
-                                <p>“Xander is a highly skilled developer with a knack for solving complex problems.”</p>
-                                <div class="flex mt-2">
-                                    <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
-                                    <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
-                                    <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
-                                </div>
-                            </div>
-                            <!-- Add more review items as needed -->
-                        </div>
-                    </div>
+            </div>
+        </section>
+        <section id="companies" class="my-8">
+            <h2 class="text-3xl font-bold mb-4 text-blue-600">Companies I've Worked With</h2>
+            <div class="company-slider">
+                <div class="company-slider-inner">
+                    <img src="https://avatars.githubusercontent.com/u/26086035?s=200&v=4" alt="Visma" class="company-logo" />
+                    <!-- Add more company logos as needed -->
                 </div>
             </div>
         </section>
-
-        <section id="resume" class="section bg-gray-100 py-12">
-            <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold mb-4 text-blue-600">Resume</h2>
-                <div class="bg-white p-6 rounded-lg shadow-lg mb-4">
-                    <img src="https://avatars.githubusercontent.com/u/26086035?s=200&v=4" alt="Visma Logo" class="w-16 h-16 mb-4"/>
-                    <h3 class="text-2xl font-bold mb-2">Software Developer at Visma</h3>
-                    <p class="text-lg">January 2018 - Present (5 years)</p>
-                    <p>Responsibilities include developing full-stack applications, managing DevOps pipelines, and ensuring seamless deployment processes.</p>
+        <section id="contact" class="my-8">
+            <h2 class="text-3xl font-bold mb-4 text-blue-600">Contact</h2>
+            <form id="contact-form" class="bg-white p-6 rounded-lg shadow-lg">
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name:</label>
+                    <input type="text" id="name" name="name" class="form-input w-full border border-gray-300 rounded-lg py-2 px-4" required>
                 </div>
-                <!-- Add more resume entries as needed -->
-            </div>
-        </section>
-
-        <section id="certificates" class="section bg-gray-100 py-12">
-            <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold mb-4 text-blue-600">Certificates</h2>
-                <div id="certificates-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Certificates will be dynamically added here -->
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
+                    <input type="email" id="email" name="email" class="form-input w-full border border-gray-300 rounded-lg py-2 px-4" required>
                 </div>
-            </div>
-        </section>
-
-        <section id="contact" class="section bg-white py-12">
-            <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold mb-4 text-blue-600">Contact</h2>
-                <form id="contact-form" class="bg-gray-100 p-6 rounded-lg shadow-lg">
-                    <label for="name" class="block text-lg mb-2">Name:</label>
-                    <input type="text" id="name" name="name" class="w-full p-2 mb-4 border border-gray-300 rounded"/>
-                    <label for="message" class="block text-lg mb-2">Message:</label>
-                    <textarea id="message" name="message" rows="4" class="w-full p-2 mb-4 border border-gray-300 rounded"></textarea>
-                    <button type="submit" class="bg-blue-600 text-white p-2 rounded">Send</button>
-                </form>
-            </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message:</label>
+                    <textarea id="message" name="message" class="form-input w-full border border-gray-300 rounded-lg py-2 px-4" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300">Send</button>
+            </form>
         </section>
     </main>
-
-    <footer class="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 text-center mt-12">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold mb-4 text-blue-600">Companies I've Worked For</h2>
-            <div class="company-slider-inner">
-                <img src="https://avatars.githubusercontent.com/u/26086035?s=200&v=4" alt="Company Logo" class="company-logo"/>
-                <img src="https://via.placeholder.com/100x100.png?text=Company+Logo" alt="Company Logo" class="company-logo"/>
-                <img src="https://via.placeholder.com/100x100.png?text=Company+Logo" alt="Company Logo" class="company-logo"/>
-                <!-- Repeat logos as needed -->
-            </div>
-            <p class="mt-4">&copy; 2024 Xander de Groot</p>
-        </div>
+    <footer class="bg-gray-800 text-white text-center py-4">
+        <p>&copy; 2024 Xander de Groot. All rights reserved.</p>
     </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Contact form submission
-            document.getElementById('contact-form').addEventListener('submit', function(e) {
-                e.preventDefault();
-                alert('Your message has been sent!');
-            });
-
-            // Reviews carousel
-            const reviewSliderInner = document.querySelector('.carousel-inner');
-            let index = 0;
-
-            function nextSlide() {
-                index++;
-                if (index >= reviewSliderInner.children.length) {
-                    index = 0;
-                }
-                const offset = -index * 100 / 3;
-                reviewSliderInner.style.transform = `translateX(${offset}%)`;
-            }
-
-            setInterval(nextSlide, 3000);
-
-            // Certificates thumbnails
-            const certificates = [
-                "https://www.sololearn.com/Certificate/CT-6TSFYX30/pdf",
-                "https://www.sololearn.com/Certificate/CT-6TSFYX30/pdf" // Add more certificate URLs here
-            ];
-
-            const certificatesContainer = document.getElementById('certificates-container');
-
-            certificates.forEach(url => {
-                const certDiv = document.createElement('div');
-                certDiv.className = 'bg-white p-4 rounded-lg shadow-lg';
-                certDiv.innerHTML = `
-                    <a href="${url}" target="_blank">
-                        <img src="https://via.placeholder.com/600x400.png?text=Certificate+Thumbnail" alt="Certificate Thumbnail" class="w-full h-auto"/>
-                    </a>
-                `;
-                certificatesContainer.appendChild(certDiv);
-            });
-
-            // Companies logos carousel
-            function populateCompanies() {
-                const companies = [
-                    "https://avatars.githubusercontent.com/u/26086035?s=200&v=4",
-                    "https://via.placeholder.com/100x100.png?text=Company+Logo",
-                    "https://via.placeholder.com/100x100.png?text=Company+Logo",
-                    // Add more logos as needed
-                ];
-
-                const companySliderInner = document.querySelector('.company-slider-inner');
-                companies.forEach(src => {
-                    const img = document.createElement('img');
-                    img.src = src;
-                    img.alt = 'Company Logo';
-                    img.className = 'company-logo';
-                    companySliderInner.appendChild(img);
-                });
-            }
-
-            populateCompanies();
-        });
-    </script>
+    <script src="path/to/your/javascript-file.js"></script>
 </body>
 </html>
