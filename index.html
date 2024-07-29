@@ -28,6 +28,7 @@
             display: flex;
             overflow-x: auto;
             scroll-behavior: smooth;
+            position: relative;
         }
         .review-item {
             flex: none;
@@ -38,12 +39,15 @@
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
+        .review-slider::-webkit-scrollbar {
+            display: none;
+        }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-900 flex flex-col min-h-screen">
     <header class="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 shadow-md">
         <div class="container mx-auto flex justify-between items-center">
-            <a href="#home" class="text-3xl font-bold hover:underline">Xander de Groot</a>
+            <a href="#about" class="text-3xl font-bold hover:underline">Xander de Groot</a>
             <nav>
                 <button id="menu-toggle" class="block lg:hidden text-white focus:outline-none">
                     <svg class="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -51,22 +55,16 @@
                     </svg>
                 </button>
                 <ul id="menu" class="hidden lg:flex lg:items-center lg:space-x-6">
-                    <li><a href="#" data-section="home" class="text-white hover:text-gray-300 transition duration-300">Home</a></li>
-                    <li><a href="#" data-section="about" class="text-white hover:text-gray-300 transition duration-300">About</a></li>
-                    <li><a href="#" data-section="resume" class="text-white hover:text-gray-300 transition duration-300">Resume</a></li>
-                    <li><a href="#" data-section="certificates" class="text-white hover:text-gray-300 transition duration-300">Certificates</a></li>
-                    <li><a href="#" data-section="contact" class="text-white hover:text-gray-300 transition duration-300">Contact</a></li>
+                    <li><a href="#about" class="text-white hover:text-gray-300 transition duration-300">About</a></li>
+                    <li><a href="#resume" class="text-white hover:text-gray-300 transition duration-300">Resume</a></li>
+                    <li><a href="#certificates" class="text-white hover:text-gray-300 transition duration-300">Certificates</a></li>
+                    <li><a href="#contact" class="text-white hover:text-gray-300 transition duration-300">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main class="container mx-auto p-4 flex-grow">
-        <section id="home" class="my-8">
-            <!-- Home section to be displayed by default -->
-            <h2 class="text-3xl font-bold mb-4 text-blue-600">Welcome</h2>
-            <p class="text-lg mb-4">This is the home section. Click the title above to return here from other sections.</p>
-        </section>
-        <section id="about" class="my-8 hidden-section">
+        <section id="about" class="my-8">
             <h2 class="text-3xl font-bold mb-4 text-blue-600">About Me</h2>
             <div class="bg-white shadow-lg rounded-lg p-6 flex items-center space-x-6 transition-transform transform hover:scale-105">
                 <img src="https://avatars.githubusercontent.com/u/9315769?v=4" alt="Xander de Groot" class="profile-img border-4 border-blue-500" />
@@ -79,7 +77,7 @@
                 </p>
             </div>
             <div class="review-slider mt-8">
-                <!-- Example Reviews -->
+                <!-- Reviews -->
                 <div class="review-item">
                     <p class="font-bold">Jane Doe</p>
                     <p>"Xander is an exceptional developer with a keen eye for detail. His work ethic and problem-solving skills are unparalleled."</p>
@@ -118,6 +116,27 @@
                             <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
                         </svg>
                         <svg class="h-5 w-5 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="review-item">
+                    <p class="font-bold">Alice Johnson</p>
+                    <p>"A pleasure to work with. Xander brings great technical skills and a positive attitude to every project."</p>
+                    <div class="flex mt-2">
+                        <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
+                        </svg>
+                        <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
+                        </svg>
+                        <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
+                        </svg>
+                        <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
+                        </svg>
+                        <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
                         </svg>
                     </div>
@@ -179,7 +198,7 @@
         document.querySelectorAll('#menu a').forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
-                const sectionId = this.getAttribute('data-section');
+                const sectionId = this.getAttribute('href').substring(1);
                 document.querySelectorAll('main section').forEach(section => {
                     section.classList.toggle('hidden-section', section.id !== sectionId);
                 });
@@ -202,21 +221,44 @@
                 const thumbnailUrl = 'https://via.placeholder.com/400x300.png?text=Certificate+Thumbnail';
                 
                 const certDiv = document.createElement('div');
-                certDiv.className = 'bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105';
-                certDiv.innerHTML = `
-                    <a href="${url}" target="_blank">
-                        <img src="${thumbnailUrl}" alt="Certificate" class="cert-img" />
-                    </a>
-                `;
+                certDiv.className = 'bg-white shadow-lg rounded-lg overflow-hidden';
+                
+                const img = document.createElement('img');
+                img.className = 'cert-img';
+                img.src = thumbnailUrl;
+                img.alt = 'Certificate Thumbnail';
+                
+                const link = document.createElement('a');
+                link.href = url;
+                link.target = '_blank';
+                link.appendChild(img);
+                
+                certDiv.appendChild(link);
                 container.appendChild(certDiv);
             });
         }
 
-        // Load certificates when the page loads
-        document.addEventListener('DOMContentLoaded', loadCertificates);
+        loadCertificates();
 
-        // Show the "Home" section by default
-        document.getElementById('home').classList.remove('hidden-section');
+        // Automatic review slider
+        let index = 0;
+        const reviews = document.querySelectorAll('.review-item');
+        const reviewInterval = 5000; // Change review every 5 seconds
+
+        function showNextReview() {
+            reviews.forEach((review, i) => {
+                review.style.display = 'none';
+            });
+            index = (index + 1) % reviews.length;
+            reviews[index].style.display = 'block';
+        }
+
+        reviews.forEach((review, i) => {
+            review.style.display = i === index ? 'block' : 'none';
+        });
+
+        setInterval(showNextReview, reviewInterval);
+
     </script>
 </body>
 </html>
