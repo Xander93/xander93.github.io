@@ -46,6 +46,30 @@
         .review-slider::-webkit-scrollbar {
             display: none;
         }
+        .company-slider {
+            display: flex;
+            overflow: hidden;
+            white-space: nowrap;
+            padding: 16px 0;
+        }
+        .company-slider-inner {
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            animation: scroll 20s linear infinite;
+        }
+        .company-logo {
+            margin-right: 24px;
+            height: 100px;
+        }
+        @keyframes scroll {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
         header {
             position: sticky;
             top: 0;
@@ -75,166 +99,174 @@
     <main class="container mx-auto p-4 flex-grow">
         <section id="about" class="my-8 min-h-screen flex flex-col justify-center">
             <h2 class="text-3xl font-bold mb-4 text-blue-600">About Me</h2>
-            <div class="bg-white shadow-lg rounded-lg p-6 flex items-center space-x-6 transition-transform transform hover:scale-105">
+            <div class="bg-white shadow-lg rounded-lg p-6 flex flex-col md:flex-row items-center space-x-6 transition-transform transform hover:scale-105">
                 <img src="https://avatars.githubusercontent.com/u/9315769?v=4" alt="Xander de Groot" class="profile-img border-4 border-blue-500" />
-                <p class="text-lg">
-                    I am a Lead Software Developer with a strong background in Full Stack Development and DevOps. 
+                <div class="text-lg">
+                    <p class="mb-4">I am a Lead Software Developer with a strong background in Full Stack Development and DevOps. 
                     I am passionate about creating innovative solutions that bridge the gap between development and production. 
                     In addition to crafting the front-end and back-end of applications, I specialize in setting up robust development environments 
                     and implementing seamless continuous automatic deployment pipelines. Beyond coding, I believe in ensuring that the applications I work on 
-                    are not only technically sound but also align with the needs of both businesses and end-users.
-                </p>
-            </div>
-        </section>
-        <section id="resume" class="my-8 min-h-screen flex flex-col justify-center">
-            <h2 class="text-3xl font-bold mb-4 text-blue-600">Resume</h2>
-            <div class="bg-white shadow-lg rounded-lg p-6 flex items-center space-x-6 transition-transform transform hover:scale-105">
-                <img src="https://avatars.githubusercontent.com/u/26086035?s=200&v=4" alt="Visma Logo" class="w-32 h-auto mb-4" />
-                <div>
-                    <h3 class="text-xl font-bold mb-2">Visma</h3>
-                    <p class="mb-2"><strong>Position:</strong> Senior Software Developer</p>
-                    <p class="mb-2"><strong>Duration:</strong> January 2018 - January 2023</p>
-                    <p class="mb-4">At Visma, I worked for five years as a Senior Software Developer, responsible for both front-end and back-end development. 
-                    My role involved developing robust solutions and optimizing development and deployment processes.</p>
+                    are not only technically sound but also align with the needs of both businesses and end-users.</p>
+                    <div class="review-slider">
+                        <div class="review-slider-inner">
+                            <!-- Review Items -->
+                            <div class="review-item">
+                                <p><strong>John Doe</strong></p>
+                                <p>“Xander is a fantastic developer with a keen eye for detail. His work at Visma was exemplary.”</p>
+                                <div class="flex mt-2">
+                                    <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
+                                    <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
+                                    <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
+                                </div>
+                            </div>
+                            <div class="review-item">
+                                <p><strong>Jane Smith</strong></p>
+                                <p>“Xander’s ability to solve complex problems and deliver robust solutions has always impressed me.”</p>
+                                <div class="flex mt-2">
+                                    <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
+                                    <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
+                                    <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
+                                </div>
+                            </div>
+                            <div class="review-item">
+                                <p><strong>Michael Brown</strong></p>
+                                <p>“Xander’s expertise in DevOps and full-stack development has been a game-changer for our team.”</p>
+                                <div class="flex mt-2">
+                                    <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
+                                    <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
+                                    <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
+                                </div>
+                            </div>
+                            <div class="review-item">
+                                <p><strong>Alice Johnson</strong></p>
+                                <p>“Xander’s dedication to continuous improvement and his innovative mindset make him a valuable asset.”</p>
+                                <div class="flex mt-2">
+                                    <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
+                                    <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
+                                    <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
+                                </div>
+                            </div>
+                            <div class="review-item">
+                                <p><strong>Olivia Williams</strong></p>
+                                <p>“Xander is a proactive and resourceful developer who always delivers quality work on time.”</p>
+                                <div class="flex mt-2">
+                                    <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
+                                    <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
+                                    <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        <section id="certificates" class="my-8 min-h-screen flex flex-col justify-center">
-            <h2 class="text-3xl font-bold mb-4 text-blue-600">Certificates</h2>
-            <div id="certificates-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Certificates will be dynamically added here -->
-            </div>
-        </section>
-        <section id="contact" class="my-8 min-h-screen flex flex-col justify-center">
-            <h2 class="text-3xl font-bold mb-4 text-blue-600">Contact</h2>
+        <section id="resume" class="my-8">
+            <h2 class="text-3xl font-bold mb-4 text-blue-600">Resume</h2>
             <div class="bg-white shadow-lg rounded-lg p-6">
-                <p class="mb-4">For any questions or to get in touch, please fill out the contact form below.</p>
-                <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-4">
+                <h3 class="text-2xl font-semibold mb-4">Professional Experience</h3>
+                <div class="flex items-center mb-4">
+                    <img src="https://avatars.githubusercontent.com/u/26086035?s=200&v=4" alt="Visma Logo" class="h-12 mr-4"/>
                     <div>
-                        <label for="name" class="block text-sm font-semibold mb-1">Name</label>
-                        <input type="text" id="name" name="name" required class="w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300" />
+                        <h4 class="text-xl font-semibold">Visma</h4>
+                        <p>Lead Software Developer (2018 - 2023)</p>
                     </div>
-                    <div>
-                        <label for="email" class="block text-sm font-semibold mb-1">Email</label>
-                        <input type="email" id="email" name="email" required class="w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300" />
-                    </div>
-                    <div>
-                        <label for="message" class="block text-sm font-semibold mb-1">Message</label>
-                        <textarea id="message" name="message" rows="4" required class="w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"></textarea>
-                    </div>
-                    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300">Send</button>
-                </form>
+                </div>
+                <!-- Add more work experiences as needed -->
             </div>
         </section>
-        <section id="reviews" class="my-8 min-h-screen flex flex-col justify-center">
-            <h2 class="text-3xl font-bold mb-4 text-blue-600">Reviews</h2>
-            <div class="review-slider">
-                <div class="review-slider-inner">
-                    <!-- Review Items -->
-                    <div class="review-item">
-                        <p><strong>John Doe</strong></p>
-                        <p>“Xander is a fantastic developer with a keen eye for detail. His work at Visma was exemplary.”</p>
-                        <div class="flex mt-2">
-                            <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
-                            <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
-                            <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
-                        </div>
-                    </div>
-                    <!-- Add more review items as needed -->
-                    <!-- Review 2 -->
-                    <div class="review-item">
-                        <p><strong>Jane Smith</strong></p>
-                        <p>“Xander’s ability to solve complex problems and deliver robust solutions has always impressed me.”</p>
-                        <div class="flex mt-2">
-                            <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
-                            <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
-                            <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
-                        </div>
-                    </div>
-                    <!-- Review 3 -->
-                    <div class="review-item">
-                        <p><strong>Michael Brown</strong></p>
-                        <p>“Xander’s expertise in DevOps and full-stack development has been a game-changer for our team.”</p>
-                        <div class="flex mt-2">
-                            <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
-                            <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
-                            <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15.27l-5.18 2.72 1.11-6.48L1 6.73l6.59-.96L10 0l2.41 5.77L19 6.73l-5.91 4.78 1.11 6.48L10 15.27z"/></svg>
-                        </div>
-                    </div>
+        <section id="certificates" class="my-8">
+            <h2 class="text-3xl font-bold mb-4 text-blue-600">Certificates</h2>
+            <div id="certificates-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        </section>
+        <section id="contact" class="my-8">
+            <h2 class="text-3xl font-bold mb-4 text-blue-600">Contact</h2>
+            <form id="contact-form" action="mailto:xdg1993@gmail.com" method="post" enctype="multipart/form-data" class="bg-white shadow-lg rounded-lg p-6">
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700">Name:</label>
+                    <input type="text" id="name" name="name" required class="w-full px-3 py-2 border border-gray-300 rounded-lg"/>
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-gray-700">Message:</label>
+                    <textarea id="message" name="message" rows="4" required class="w-full px-3 py-2 border border-gray-300 rounded-lg"></textarea>
+                </div>
+                <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Send</button>
+            </form>
+        </section>
+        <section id="companies" class="my-8">
+            <h2 class="text-3xl font-bold mb-4 text-blue-600">Companies I've Worked For</h2>
+            <div class="company-slider">
+                <div class="company-slider-inner">
+                    <img src="https://avatars.githubusercontent.com/u/26086035?s=200&v=4" alt="Visma Logo" class="company-logo"/>
+                    <!-- Add more company logos as needed -->
                 </div>
             </div>
         </section>
     </main>
-    <footer class="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4">
-        <div class="container mx-auto text-center">
-            <p>&copy; 2024 Xander de Groot. All rights reserved.</p>
-        </div>
+    <footer class="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 text-center">
+        <p>&copy; 2024 Xander de Groot</p>
     </footer>
     <script>
-        document.getElementById('menu-toggle').addEventListener('click', function() {
-            var menu = document.getElementById('menu');
-            menu.classList.toggle('hidden');
-            menu.classList.toggle('block');
-        });
-
-        document.querySelectorAll('#menu a').forEach(link => {
-            link.addEventListener('click', function(e) {
+        document.addEventListener('DOMContentLoaded', () => {
+            // Contact form submission
+            document.getElementById('contact-form').addEventListener('submit', function(e) {
                 e.preventDefault();
-                const sectionId = this.getAttribute('href').substring(1);
-                document.querySelectorAll('main section').forEach(section => {
-                    if (section.id === sectionId) {
-                        section.scrollIntoView({ behavior: 'smooth' });
-                    }
-                });
+                alert('Your message has been sent!');
             });
-        });
 
-        // Example certificates data (you can add more certificates or modify as needed)
-        const certificates = [
-            'https://www.sololearn.com/Certificate/CT-6TSFYX30/pdf',
-            'https://www.sololearn.com/Certificate/CT-6TSFYX30/pdf' // Add more as needed
-        ];
+            // Reviews carousel
+            const reviewSliderInner = document.querySelector('.review-slider-inner');
+            let index = 0;
 
-        function loadCertificates() {
-            const container = document.getElementById('certificates-container');
-            certificates.forEach(url => {
-                const thumbnailUrl = 'https://via.placeholder.com/300x200.png?text=Certificate+Thumbnail';
-                const certDiv = document.createElement('div');
-                certDiv.className = 'bg-white shadow-lg rounded-lg overflow-hidden';
-                
-                const img = document.createElement('img');
-                img.className = 'cert-img';
-                img.src = thumbnailUrl;
-                img.alt = 'Certificate Thumbnail';
-                
-                const link = document.createElement('a');
-                link.href = url;
-                link.target = '_blank';
-                link.appendChild(img);
-                
-                certDiv.appendChild(link);
-                container.appendChild(certDiv);
-            });
-        }
-
-        loadCertificates();
-
-        // Automatic review slider
-        let currentIndex = 0;
-        const reviewInterval = 5000; // Change review every 5 seconds
-
-        function updateReviews() {
-            const reviews = document.querySelectorAll('.review-item');
-            const totalReviews = reviews.length;
-            const slideWidth = reviews[0].clientWidth + 16; // Adding margin-right
-
-            if (totalReviews > 0) {
-                currentIndex = (currentIndex + 1) % totalReviews;
-                document.querySelector('.review-slider-inner').style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+            function nextSlide() {
+                index++;
+                if (index >= reviewSliderInner.children.length - 2) {
+                    index = 0;
+                }
+                const offset = -index * 100 / 3;
+                reviewSliderInner.style.transform = `translateX(${offset}%)`;
             }
-        }
 
-        setInterval(updateReviews, reviewInterval);
+            setInterval(nextSlide, 3000);
+
+            // Certificates thumbnails
+            const certificates = [
+                "https://www.sololearn.com/Certificate/CT-6TSFYX30/pdf",
+                "https://www.sololearn.com/Certificate/CT-6TSFYX30/pdf", // Placeholder URL for more certificates
+            ];
+
+            const certificatesContainer = document.getElementById('certificates-container');
+
+            certificates.forEach(url => {
+                const certDiv = document.createElement('div');
+                certDiv.className = 'bg-white p-4 rounded-lg shadow-lg';
+                certDiv.innerHTML = `
+                    <a href="${url}" target="_blank">
+                        <img src="https://via.placeholder.com/600x400.png?text=Certificate+Thumbnail" alt="Certificate Thumbnail" class="cert-img"/>
+                    </a>
+                `;
+                certificatesContainer.appendChild(certDiv);
+            });
+
+            // Companies logos carousel
+            const companySliderInner = document.querySelector('.company-slider-inner');
+
+            function populateCompanies() {
+                const companies = [
+                    "https://avatars.githubusercontent.com/u/26086035?s=200&v=4", // Visma
+                    "https://via.placeholder.com/100x100.png?text=Company+Logo", // Add more logos as needed
+                ];
+
+                companies.forEach(logoUrl => {
+                    const img = document.createElement('img');
+                    img.src = logoUrl;
+                    img.alt = "Company Logo";
+                    img.className = "company-logo";
+                    companySliderInner.appendChild(img);
+                });
+            }
+
+            populateCompanies();
+        });
     </script>
 </body>
 </html>
