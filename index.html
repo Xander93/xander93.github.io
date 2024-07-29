@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xander de Groot's Personal Website</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
         .profile-img {
             border-radius: 50%;
             width: 150px;
@@ -77,10 +75,10 @@
             position: sticky;
             top: 0;
             z-index: 50;
-            background: linear-gradient(to right, #4f46e5, #a78bfa);
         }
-        section {
-            padding: 4rem 0;
+        .star-rating i {
+            color: gold;
+            margin-right: 2px;
         }
     </style>
 </head>
@@ -109,68 +107,139 @@
             <div class="bg-white shadow-lg rounded-lg p-6 flex flex-col md:flex-row items-center space-x-6 transition-transform transform hover:scale-105">
                 <img src="https://avatars.githubusercontent.com/u/9315769?v=4" alt="Xander de Groot" class="profile-img border-4 border-blue-500" />
                 <div class="text-lg">
-                    <p>Hello! I'm Xander de Groot, a passionate developer with experience in full-stack web development. I love working on projects that make a difference and am always eager to learn new technologies.</p>
+                    <p class="mb-4">I am a Lead Software Developer with a strong background in Full Stack Development and DevOps. 
+                    I am passionate about creating innovative solutions that bridge the gap between development and production. 
+                    In addition to crafting the front-end and back-end of applications, I specialize in setting up robust development environments 
+                    and implementing seamless continuous automatic deployment pipelines. Beyond coding, I believe in ensuring that the applications I work on 
+                    are not only technically sound but also align with the needs of both businesses and end-users.</p>
+                    <div class="review-slider">
+                        <div class="review-slider-inner">
+                            <!-- Review Items -->
+                            <div class="review-item">
+                                <div class="flex items-center mb-2">
+                                    <span class="star-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </span>
+                                </div>
+                                <p><strong>John Doe</strong></p>
+                                <p>“Xander is a fantastic developer with a keen eye for detail. His work at Visma was exemplary.”</p>
+                            </div>
+                            <div class="review-item">
+                                <div class="flex items-center mb-2">
+                                    <span class="star-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </span>
+                                </div>
+                                <p><strong>Jane Smith</strong></p>
+                                <p>“Xander’s ability to solve complex problems and deliver robust solutions has always impressed me.”</p>
+                            </div>
+                            <div class="review-item">
+                                <div class="flex items-center mb-2">
+                                    <span class="star-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </span>
+                                </div>
+                                <p><strong>Michael Brown</strong></p>
+                                <p>“Xander’s expertise in DevOps and full-stack development has been a game-changer for our team.”</p>
+                            </div>
+                            <div class="review-item">
+                                <div class="flex items-center mb-2">
+                                    <span class="star-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </span>
+                                </div>
+                                <p><strong>Alice Johnson</strong></p>
+                                <p>“Xander’s dedication to continuous improvement and his innovative mindset make him a valuable asset.”</p>
+                            </div>
+                            <div class="review-item">
+                                <div class="flex items-center mb-2">
+                                    <span class="star-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </span>
+                                </div>
+                                <p><strong>Olivia Williams</strong></p>
+                                <p>“Xander is a proactive and resourceful developer who always delivers quality work on time.”</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
         <section id="resume" class="my-8">
             <h2 class="text-3xl font-bold mb-4 text-blue-600">Resume</h2>
-            <p>Check out my <a href="#" class="text-blue-500 hover:underline">full resume</a> for more details about my professional experience and skills.</p>
+            <div class="bg-white shadow-lg rounded-lg p-6">
+                <h3 class="text-2xl font-semibold mb-4">Professional Experience</h3>
+                <div class="flex items-center mb-4">
+                    <img src="https://avatars.githubusercontent.com/u/26086035?s=200&v=4" alt="Visma" class="w-20 h-20 object-contain mr-4" />
+                    <div>
+                        <h4 class="text-xl font-bold">Visma</h4>
+                        <p>Software Engineer (2018 - 2023)</p>
+                        <p>Worked on various projects including application development, maintenance, and continuous integration systems.</p>
+                    </div>
+                </div>
+                <!-- Voeg hier andere werkervaringen of opleidingen toe -->
+            </div>
         </section>
         <section id="certificates" class="my-8">
             <h2 class="text-3xl font-bold mb-4 text-blue-600">Certificates</h2>
-            <div id="certificates-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"></div>
-        </section>
-        <section id="reviews" class="my-8">
-            <h2 class="text-3xl font-bold mb-4 text-blue-600">Reviews</h2>
-            <div class="review-slider">
-                <div class="review-slider-inner">
-                    <div class="review-item">
-                        <p>"Great work and attention to detail. Highly recommend!"</p>
-                        <p>- Client A</p>
-                    </div>
-                    <div class="review-item">
-                        <p>"A pleasure to work with. Delivered on time and exceeded expectations."</p>
-                        <p>- Client B</p>
-                    </div>
-                    <div class="review-item">
-                        <p>"Excellent communication and professional skills. Will work with again."</p>
-                        <p>- Client C</p>
-                    </div>
+            <div class="flex flex-wrap">
+                <!-- Certificaat 1 -->
+                <div class="w-full md:w-1/2 lg:w-1/3 p-2">
+                    <img src="https://via.placeholder.com/600x400.png?text=Certificaat+1" alt="Certificaat 1" class="cert-img" />
+                    <p class="text-center mt-2">Certificate Title</p>
                 </div>
-            </div>
-        </section>
-        <section id="companies" class="my-8">
-            <h2 class="text-3xl font-bold mb-4 text-blue-600">Companies I've Worked With</h2>
-            <div class="company-slider">
-                <div class="company-slider-inner">
-                    <img src="https://avatars.githubusercontent.com/u/26086035?s=200&v=4" alt="Visma" class="company-logo" />
-                    <!-- Add more company logos as needed -->
+                <!-- Certificaat 2 -->
+                <div class="w-full md:w-1/2 lg:w-1/3 p-2">
+                    <img src="https://via.placeholder.com/600x400.png?text=Certificaat+2" alt="Certificaat 2" class="cert-img" />
+                    <p class="text-center mt-2">Certificate Title</p>
                 </div>
+                <!-- Voeg hier meer certificaten toe -->
             </div>
         </section>
         <section id="contact" class="my-8">
             <h2 class="text-3xl font-bold mb-4 text-blue-600">Contact</h2>
-            <form id="contact-form" class="bg-white p-6 rounded-lg shadow-lg">
-                <div class="mb-4">
-                    <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name:</label>
-                    <input type="text" id="name" name="name" class="form-input w-full border border-gray-300 rounded-lg py-2 px-4" required>
-                </div>
-                <div class="mb-4">
-                    <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
-                    <input type="email" id="email" name="email" class="form-input w-full border border-gray-300 rounded-lg py-2 px-4" required>
-                </div>
-                <div class="mb-4">
-                    <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message:</label>
-                    <textarea id="message" name="message" class="form-input w-full border border-gray-300 rounded-lg py-2 px-4" rows="4" required></textarea>
-                </div>
-                <button type="submit" class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300">Send</button>
-            </form>
+            <div class="bg-white shadow-lg rounded-lg p-6">
+                <p>For inquiries, please contact me at:</p>
+                <p>Email: <a href="mailto:xander.degroot@example.com" class="text-blue-600 hover:underline">xander.degroot@example.com</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/xanderdegroot" class="text-blue-600 hover:underline" target="_blank">linkedin.com/in/xanderdegroot</a></p>
+            </div>
         </section>
     </main>
-    <footer class="bg-gray-800 text-white text-center py-4">
-        <p>&copy; 2024 Xander de Groot. All rights reserved.</p>
+    <footer class="bg-gray-800 text-white p-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Xander de Groot. All rights reserved.</p>
+        </div>
     </footer>
-    <script src="path/to/your/javascript-file.js"></script>
+    <script>
+        // Script voor menu toggle op mobiele apparaten
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            var menu = document.getElementById('menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+            }
+        });
+    </script>
 </body>
 </html>
