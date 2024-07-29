@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xander de Groot's Personal Webpage</title>
+    <title>Xander de Groot's Personal Website</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         .hidden-section {
@@ -24,12 +24,26 @@
         .cert-img:hover {
             transform: scale(1.05);
         }
+        .review-slider {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+        }
+        .review-item {
+            flex: none;
+            width: 300px;
+            margin-right: 16px;
+            background: #fff;
+            padding: 16px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-900 flex flex-col min-h-screen">
     <header class="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 shadow-md">
         <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-3xl font-bold">Xander de Groot</h1>
+            <a href="#home" class="text-3xl font-bold hover:underline">Xander de Groot</a>
             <nav>
                 <button id="menu-toggle" class="block lg:hidden text-white focus:outline-none">
                     <svg class="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -37,8 +51,9 @@
                     </svg>
                 </button>
                 <ul id="menu" class="hidden lg:flex lg:items-center lg:space-x-6">
+                    <li><a href="#" data-section="home" class="text-white hover:text-gray-300 transition duration-300">Home</a></li>
                     <li><a href="#" data-section="about" class="text-white hover:text-gray-300 transition duration-300">About</a></li>
-                    <li><a href="#" data-section="portfolio" class="text-white hover:text-gray-300 transition duration-300">Portfolio</a></li>
+                    <li><a href="#" data-section="resume" class="text-white hover:text-gray-300 transition duration-300">Resume</a></li>
                     <li><a href="#" data-section="certificates" class="text-white hover:text-gray-300 transition duration-300">Certificates</a></li>
                     <li><a href="#" data-section="contact" class="text-white hover:text-gray-300 transition duration-300">Contact</a></li>
                 </ul>
@@ -46,53 +61,91 @@
         </div>
     </header>
     <main class="container mx-auto p-4 flex-grow">
+        <section id="home" class="my-8">
+            <!-- Home section to be displayed by default -->
+            <h2 class="text-3xl font-bold mb-4 text-blue-600">Welcome</h2>
+            <p class="text-lg mb-4">This is the home section. Click the title above to return here from other sections.</p>
+        </section>
         <section id="about" class="my-8 hidden-section">
             <h2 class="text-3xl font-bold mb-4 text-blue-600">About Me</h2>
             <div class="bg-white shadow-lg rounded-lg p-6 flex items-center space-x-6 transition-transform transform hover:scale-105">
                 <img src="https://avatars.githubusercontent.com/u/9315769?v=4" alt="Xander de Groot" class="profile-img border-4 border-blue-500" />
                 <p class="text-lg">
-                    I'm a Lead Software Developer with a strong background in Full Stack Development and DevOps. 
-                    I'm passionate about creating innovative solutions that bridge the gap between development and production. 
+                    I am a Lead Software Developer with a strong background in Full Stack Development and DevOps. 
+                    I am passionate about creating innovative solutions that bridge the gap between development and production. 
                     In addition to crafting the front-end and back-end of applications, I specialize in setting up robust development environments 
-                    and implementing seamless continuous automatic deployment pipelines. Beyond coding, I believe in ensuring that the applications 
-                    I work on are not only technically sound, but also align with the needs of both businesses and end-users.
+                    and implementing seamless continuous automatic deployment pipelines. Beyond coding, I believe in ensuring that the applications I work on 
+                    are not only technically sound but also align with the needs of both businesses and end-users.
                 </p>
             </div>
+            <div class="review-slider mt-8">
+                <!-- Example Reviews -->
+                <div class="review-item">
+                    <p class="font-bold">Jane Doe</p>
+                    <p>"Xander is an exceptional developer with a keen eye for detail. His work ethic and problem-solving skills are unparalleled."</p>
+                    <div class="flex mt-2">
+                        <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
+                        </svg>
+                        <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
+                        </svg>
+                        <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
+                        </svg>
+                        <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
+                        </svg>
+                        <svg class="h-5 w-5 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="review-item">
+                    <p class="font-bold">John Smith</p>
+                    <p>"A highly skilled and reliable developer. Xander's expertise in both front-end and back-end development is impressive."</p>
+                    <div class="flex mt-2">
+                        <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
+                        </svg>
+                        <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
+                        </svg>
+                        <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
+                        </svg>
+                        <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
+                        </svg>
+                        <svg class="h-5 w-5 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 17.27l5.18 3.03-1.39-5.85L20 9.24l-6.04-.52L12 3 10.04 8.72 4 9.24l4.21 4.21-1.39 5.85L12 17.27z"/>
+                        </svg>
+                    </div>
+                </div>
+                <!-- Add more reviews as needed -->
+            </div>
         </section>
-        <section id="portfolio" class="my-8 hidden-section">
-            <h2 class="text-3xl font-bold mb-4 text-blue-600">Portfolio</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Project 1 -->
-                <div class="bg-white shadow-lg rounded-lg p-4 transition-transform transform hover:scale-105">
-                    <h3 class="text-xl font-bold mb-2">Project 1</h3>
-                    <p class="mb-2">Beschrijving van Project 1. Wat het doet, gebruikte technologieën, en je rol in het project.</p>
-                    <a href="#" class="text-blue-600 hover:underline transition duration-300">Bekijk project</a>
-                </div>
-                <!-- Project 2 -->
-                <div class="bg-white shadow-lg rounded-lg p-4 transition-transform transform hover:scale-105">
-                    <h3 class="text-xl font-bold mb-2">Project 2</h3>
-                    <p class="mb-2">Beschrijving van Project 2. Wat het doet, gebruikte technologieën, en je rol in het project.</p>
-                    <a href="#" class="text-blue-600 hover:underline transition duration-300">Bekijk project</a>
-                </div>
-                <!-- Project 3 -->
-                <div class="bg-white shadow-lg rounded-lg p-4 transition-transform transform hover:scale-105">
-                    <h3 class="text-xl font-bold mb-2">Project 3</h3>
-                    <p class="mb-2">Beschrijving van Project 3. Wat het doet, gebruikte technologieën, en je rol in het project.</p>
-                    <a href="#" class="text-blue-600 hover:underline transition duration-300">Bekijk project</a>
-                </div>
-                <!-- Voeg meer projecten toe zoals nodig -->
+        <section id="resume" class="my-8 hidden-section">
+            <h2 class="text-3xl font-bold mb-4 text-blue-600">Resume</h2>
+            <div class="bg-white shadow-lg rounded-lg p-6 transition-transform transform hover:scale-105">
+                <h3 class="text-xl font-bold mb-2">Visma</h3>
+                <p class="mb-2"><strong>Position:</strong> Senior Software Developer</p>
+                <p class="mb-2"><strong>Duration:</strong> January 2015 - January 2020</p>
+                <p class="mb-4">At Visma, I worked for five years as a Senior Software Developer, responsible for both front-end and back-end development. 
+                My role involved developing robust solutions and optimizing development and deployment processes.</p>
+                <!-- Add more work experience as needed -->
             </div>
         </section>
         <section id="certificates" class="my-8 hidden-section">
             <h2 class="text-3xl font-bold mb-4 text-blue-600">Certificates</h2>
             <div id="certificates-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Certificates will be dynamically inserted here -->
+                <!-- Certificates will be dynamically added here -->
             </div>
         </section>
         <section id="contact" class="my-8 hidden-section">
             <h2 class="text-3xl font-bold mb-4 text-blue-600">Contact</h2>
             <div class="bg-white shadow-lg rounded-lg p-6">
-                <p class="mb-4">For any inquiries or if you would like to get in touch, please fill out the contact form below.</p>
+                <p class="mb-4">For any questions or to get in touch, please fill out the contact form below.</p>
                 <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-4">
                     <div>
                         <label for="name" class="block text-sm font-semibold mb-1">Name</label>
@@ -133,52 +186,37 @@
             });
         });
 
-        // Example certificates data (you can add or modify these dynamically)
+        // Example certificates data (you can add more certificates or modify as needed)
         const certificates = [
             'https://www.sololearn.com/Certificate/CT-6TSFYX30/pdf',
             'https://www.sololearn.com/Certificate/CT-6TSFYX30/pdf',
             'https://www.sololearn.com/Certificate/CT-6TSFYX30/pdf'
-            // Add more certificate URLs here if needed
+            // Add more certificate URLs here as needed
         ];
 
-        // Function to fetch and display certificate thumbnails
+        // Function to load and display certificate thumbnails
         function loadCertificates() {
             const container = document.getElementById('certificates-container');
             certificates.forEach(url => {
-                fetchThumbnail(url).then(thumbnailUrl => {
-                    const certDiv = document.createElement('div');
-                    certDiv.className = 'bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105';
-                    certDiv.innerHTML = `
-                        <a href="${url}" target="_blank">
-                            <img src="${thumbnailUrl}" alt="Certificate" class="cert-img" />
-                        </a>
-                    `;
-                    container.appendChild(certDiv);
-                });
+                // Placeholder thumbnail image
+                const thumbnailUrl = 'https://via.placeholder.com/400x300.png?text=Certificate+Thumbnail';
+                
+                const certDiv = document.createElement('div');
+                certDiv.className = 'bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105';
+                certDiv.innerHTML = `
+                    <a href="${url}" target="_blank">
+                        <img src="${thumbnailUrl}" alt="Certificate" class="cert-img" />
+                    </a>
+                `;
+                container.appendChild(certDiv);
             });
         }
 
-        // Function to fetch a thumbnail image from a PDF-to-Image API
-        async function fetchThumbnail(pdfUrl) {
-            // Replace with actual API URL and API Key if needed
-            const apiKey = 'YOUR_API_KEY';
-            const apiUrl = `https://api.example.com/pdf-to-image?url=${encodeURIComponent(pdfUrl)}&apikey=${apiKey}`;
-            
-            try {
-                const response = await fetch(apiUrl);
-                const data = await response.json();
-                return data.thumbnailUrl; // Adjust based on actual API response
-            } catch (error) {
-                console.error('Error fetching thumbnail:', error);
-                return 'https://via.placeholder.com/400x300.png?text=Thumbnail+Unavailable'; // Fallback
-            }
-        }
-
-        // Load certificates on page load
+        // Load certificates when the page loads
         document.addEventListener('DOMContentLoaded', loadCertificates);
 
-        // Show the "About" section by default
-        document.getElementById('about').classList.remove('hidden-section');
+        // Show the "Home" section by default
+        document.getElementById('home').classList.remove('hidden-section');
     </script>
 </body>
 </html>
