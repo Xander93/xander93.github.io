@@ -5,14 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xander de Groot's Personal Webpage</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        /* Voor het tonen/verbergen van het mobiele menu */
-        .hidden { display: none; }
-        .block { display: block; }
-    </style>
 </head>
 <body class="bg-gray-100 text-gray-900">
-    <header class="bg-blue-900 text-white p-4">
+    <header class="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 shadow-md">
         <div class="container mx-auto flex justify-between items-center">
             <h1 class="text-3xl font-bold">Xander de Groot</h1>
             <nav>
@@ -31,25 +26,49 @@
     </header>
     <main class="container mx-auto p-4">
         <section id="about" class="my-8">
-            <h2 class="text-2xl font-bold mb-4">About Me</h2>
-            <p>
-                I'm a Lead Software Developer with a strong background in Full Stack Development and DevOps. 
-                I'm passionate about creating innovative solutions that bridge the gap between development and production. 
-                In addition to crafting the front-end and back-end of applications, I specialize in setting up robust development environments 
-                and implementing seamless continuous automatic deployment pipelines. Beyond coding, I believe in ensuring that the applications 
-                I work on are not only technically sound, but also align with the needs of both businesses and end-users.
-            </p>
+            <h2 class="text-3xl font-bold mb-4 text-blue-600">About Me</h2>
+            <div class="bg-white shadow-md rounded-lg p-6">
+                <p>
+                    I'm a Lead Software Developer with a strong background in Full Stack Development and DevOps. 
+                    I'm passionate about creating innovative solutions that bridge the gap between development and production. 
+                    In addition to crafting the front-end and back-end of applications, I specialize in setting up robust development environments 
+                    and implementing seamless continuous automatic deployment pipelines. Beyond coding, I believe in ensuring that the applications 
+                    I work on are not only technically sound, but also align with the needs of both businesses and end-users.
+                </p>
+            </div>
         </section>
         <section id="portfolio" class="my-8">
-            <h2 class="text-2xl font-bold mb-4">Portfolio</h2>
-            <p>(Voeg hier je projecten toe)</p>
+            <h2 class="text-3xl font-bold mb-4 text-blue-600">Portfolio</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Project 1 -->
+                <div class="bg-white shadow-md rounded-lg p-4">
+                    <h3 class="text-xl font-bold mb-2">Project 1</h3>
+                    <p class="mb-2">Beschrijving van Project 1. Wat het doet, gebruikte technologieën, en je rol in het project.</p>
+                    <a href="#" class="text-blue-600 hover:underline">Bekijk project</a>
+                </div>
+                <!-- Project 2 -->
+                <div class="bg-white shadow-md rounded-lg p-4">
+                    <h3 class="text-xl font-bold mb-2">Project 2</h3>
+                    <p class="mb-2">Beschrijving van Project 2. Wat het doet, gebruikte technologieën, en je rol in het project.</p>
+                    <a href="#" class="text-blue-600 hover:underline">Bekijk project</a>
+                </div>
+                <!-- Project 3 -->
+                <div class="bg-white shadow-md rounded-lg p-4">
+                    <h3 class="text-xl font-bold mb-2">Project 3</h3>
+                    <p class="mb-2">Beschrijving van Project 3. Wat het doet, gebruikte technologieën, en je rol in het project.</p>
+                    <a href="#" class="text-blue-600 hover:underline">Bekijk project</a>
+                </div>
+                <!-- Voeg meer projecten toe zoals nodig -->
+            </div>
         </section>
         <section id="contact" class="my-8">
-            <h2 class="text-2xl font-bold mb-4">Contact</h2>
-            <p>For contact information, please reach out to me directly. I am available via email or phone upon request.</p>
+            <h2 class="text-3xl font-bold mb-4 text-blue-600">Contact</h2>
+            <div class="bg-white shadow-md rounded-lg p-6">
+                <p>For contact information, please reach out to me directly. I am available via email or phone upon request.</p>
+            </div>
         </section>
     </main>
-    <footer class="bg-blue-900 text-white p-4">
+    <footer class="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4">
         <div class="container mx-auto text-center">
             <p>&copy; 2024 Xander de Groot. All rights reserved.</p>
         </div>
