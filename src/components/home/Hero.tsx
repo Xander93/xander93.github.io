@@ -44,21 +44,12 @@ export function Hero() {
           </div>
 
           <div className="mt-5 flex flex-wrap items-center gap-3">
-            <span className="relative inline-flex items-center gap-2 overflow-hidden rounded-full border border-gold/40 bg-gold/15 px-4 py-2 text-sm font-bold text-gold-dark animate-glow-pulse">
-              <span
-                aria-hidden
-                className="animate-shine pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-transparent via-white/70 to-transparent"
-              />
-              <Zap
-                size={15}
-                fill="currentColor"
-                strokeWidth={0}
-                className="relative animate-pulse"
-              />
-              <span className="relative">Vandaag besteld = morgen in productie</span>
+            <span className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/15 px-4 py-2 text-sm font-bold text-gold-dark animate-glow-pulse">
+              <Zap size={15} fill="currentColor" strokeWidth={0} />
+              Vandaag besteld = morgen in productie
             </span>
-            <span className="inline-flex items-center gap-2 rounded-full border border-ink/12 bg-white/55 px-4 py-2 text-sm font-medium text-ink-soft backdrop-blur">
-              <Truck size={15} className="text-ink-muted" />
+            <span className="inline-flex items-center gap-2 rounded-full border border-sage/40 bg-sage/15 px-4 py-2 text-sm font-semibold text-sage-dark backdrop-blur">
+              <Truck size={15} />
               Klaar in 5–6 werkdagen
             </span>
           </div>

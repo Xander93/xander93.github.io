@@ -41,7 +41,7 @@ const config: Config = {
         // warm, inviting, emotional accent (sonogram amber / candlelight)
         gold: { DEFAULT: "#E0AE68", light: "#F1CF96", dark: "#B5854A" },
         blush: { DEFAULT: "#E9C7BE", deep: "#D79E91" },
-        sage: "#9FA88F",
+        sage: { DEFAULT: "#9FA88F", dark: "#566A45" },
       },
       fontFamily: {
         display: ["var(--font-display)", "system-ui", "sans-serif"],
@@ -99,18 +99,8 @@ const config: Config = {
           "100%": { backgroundPosition: "200% 50%" },
         },
         "glow-pulse": {
-          "0%,100%": {
-            boxShadow:
-              "0 0 0 0 rgba(224,174,104,0), 0 6px 18px -6px rgba(224,174,104,0.45)",
-          },
-          "50%": {
-            boxShadow:
-              "0 0 0 5px rgba(224,174,104,0.14), 0 12px 26px -6px rgba(224,174,104,0.8)",
-          },
-        },
-        shine: {
-          "0%": { transform: "translateX(-120%) skewX(-12deg)" },
-          "55%,100%": { transform: "translateX(260%) skewX(-12deg)" },
+          "0%,100%": { boxShadow: "0 0 0 0 rgba(224,174,104,0)" },
+          "50%": { boxShadow: "0 0 16px 0 rgba(224,174,104,0.38)" },
         },
       },
       animation: {
@@ -121,8 +111,7 @@ const config: Config = {
         "pulse-glow": "pulse-glow 7s ease-in-out infinite",
         "spin-slow": "spin-slow 38s linear infinite",
         shimmer: "shimmer 6s linear infinite",
-        "glow-pulse": "glow-pulse 2.6s ease-in-out infinite",
-        shine: "shine 3.4s ease-in-out infinite",
+        "glow-pulse": "glow-pulse 3.6s ease-in-out infinite",
       },
     },
   },
