@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
-import { Sora, Inter } from "next/font/google"
+import { Sora, Inter, Caveat } from "next/font/google"
 import "./globals.css"
+import { AnnouncementBar } from "@/components/site/AnnouncementBar"
 import { Header } from "@/components/site/Header"
 import { Footer } from "@/components/site/Footer"
 
@@ -17,6 +18,13 @@ const sans = Inter({
   display: "swap",
 })
 
+const hand = Caveat({
+  subsets: ["latin"],
+  weight: ["400", "600"],
+  variable: "--font-hand",
+  display: "swap",
+})
+
 export const metadata: Metadata = {
   title: "EchoPrint — Een tastbare herinnering aan je eerste echo",
   description:
@@ -29,8 +37,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="nl" className={`${display.variable} ${sans.variable}`}>
+    <html
+      lang="nl"
+      className={`${display.variable} ${sans.variable} ${hand.variable}`}
+    >
       <body className="flex min-h-screen flex-col">
+        <AnnouncementBar />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

@@ -1,5 +1,7 @@
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
+import { PolaroidEcho } from "@/components/PolaroidEcho"
+import { ECHOS } from "@/lib/echos"
 
 export function FinalCta() {
   return (
@@ -9,7 +11,20 @@ export function FinalCta() {
         <div className="orb -bottom-24 -left-10 h-72 w-72 bg-plum/40" />
         <div className="orb left-1/2 top-1/2 h-60 w-60 bg-blush/20" />
 
-        <div className="relative mx-auto max-w-2xl">
+        {/* drifting memories — echoing the hero (bookend motif) */}
+        <div className="pointer-events-none absolute inset-0 hidden sm:block" aria-hidden>
+          <div className="absolute left-2 top-7 w-24 animate-float-slow">
+            <PolaroidEcho src={ECHOS[2]} caption="ons wondertje" rotate="-10deg" />
+          </div>
+          <div
+            className="absolute bottom-9 right-3 w-[5.5rem] animate-float"
+            style={{ animationDelay: "1.6s" }}
+          >
+            <PolaroidEcho src={ECHOS[5]} caption="12 mei" rotate="9deg" />
+          </div>
+        </div>
+
+        <div className="relative z-10 mx-auto max-w-2xl">
           <span className="text-[11px] font-medium uppercase tracking-luxe text-gold-light">
             Begin vandaag
           </span>

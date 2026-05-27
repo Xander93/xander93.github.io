@@ -4,8 +4,9 @@ import { ECHOS, HERO_ECHO } from "@/lib/echos"
 
 export function Transformation() {
   return (
-    <section className="container-luxe scroll-mt-24 py-20 sm:py-28">
-      <div className="mx-auto max-w-2xl text-center">
+    <section className="scroll-mt-24 border-y border-ink/[0.06] bg-ivory-200/45 py-20 sm:py-28">
+      <div className="container-luxe">
+        <div className="mx-auto max-w-2xl text-center">
         <span className="eyebrow">
           <Sparkles size={13} /> Zo werkt het
         </span>
@@ -77,6 +78,7 @@ export function Transformation() {
             ))}
           </div>
         </div>
+      </div>
       </div>
     </section>
   )

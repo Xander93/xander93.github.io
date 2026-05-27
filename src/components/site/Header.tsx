@@ -51,7 +51,7 @@ export function Header() {
         </nav>
 
         <div className="hidden md:block">
-          <Link href="/bestellen" className="btn-primary">
+          <Link href="/bestellen" className="btn-gold">
             Maak jouw beeldje
           </Link>
         </div>
@@ -81,7 +81,7 @@ export function Header() {
             <Link
               href="/bestellen"
               onClick={() => setOpen(false)}
-              className="btn-primary mt-2"
+              className="btn-gold mt-2"
             >
               Maak jouw beeldje
             </Link>

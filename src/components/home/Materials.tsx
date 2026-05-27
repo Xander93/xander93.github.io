@@ -85,7 +85,7 @@ export function Materials() {
             </div>
           </div>
 
-          <Link href="/bestellen" className="btn-primary mt-9">
+          <Link href="/bestellen" className="btn-gold mt-9">
             Stel jouw beeldje samen <ArrowRight size={18} />
           </Link>
         </div>

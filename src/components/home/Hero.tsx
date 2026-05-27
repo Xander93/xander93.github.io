@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowRight, Star, Clock } from "lucide-react"
+import { ArrowRight, Star, Zap } from "lucide-react"
 import { StatuePreview } from "@/components/StatuePreview"
 import { FloatingEchos } from "@/components/FloatingEchos"
 import { HERO_ECHO } from "@/lib/echos"
@@ -42,19 +42,30 @@ export function Hero() {
             </Link>
           </div>
 
-          <p className="mt-4 flex items-center gap-2 text-sm text-ink-soft">
-            <Clock size={15} className="text-gold-dark" />
-            Klaar in 5–6 werkdagen · vandaag besteld, morgen in productie
-          </p>
+          <div className="mt-5 flex flex-wrap items-center gap-3">
+            <span className="inline-flex items-center gap-2 rounded-full bg-gold/15 px-4 py-2 text-sm font-bold text-gold-dark ring-1 ring-gold/30">
+              <Zap size={15} fill="currentColor" strokeWidth={0} />
+              Vandaag besteld = morgen in productie
+            </span>
+            <span className="text-sm font-medium text-ink-soft">
+              Klaar in 5–6 werkdagen
+            </span>
+          </div>
 
           <div className="mt-8 inline-flex items-center gap-4 rounded-2xl border border-white/60 bg-white/40 px-4 py-3 backdrop-blur">
             <div className="flex -space-x-2">
-              {["#E9C7BE", "#C8A15A", "#9FA88F", "#D79E91"].map((c) => (
+              {["a1", "a2", "a3", "a4"].map((a) => (
                 <span
-                  key={c}
-                  className="h-8 w-8 rounded-full border-2 border-ivory"
-                  style={{ background: c }}
-                />
+                  key={a}
+                  className="h-8 w-8 overflow-hidden rounded-full border-2 border-ivory"
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={`/avatars/${a}.jpg`}
+                    alt=""
+                    className="h-full w-full object-cover"
+                  />
+                </span>
               ))}
             </div>
             <div className="text-sm text-ink-soft">
@@ -63,7 +74,7 @@ export function Hero() {
                   <Star key={i} size={14} fill="currentColor" strokeWidth={0} />
                 ))}
               </div>
-              <span>Geliefd bij 1.200+ kersverse ouders</span>
+              <span>Al 30+ blije ouders gingen je voor</span>
             </div>
           </div>
         </div>

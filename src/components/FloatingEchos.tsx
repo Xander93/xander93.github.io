@@ -1,16 +1,40 @@
+import { clsx } from "clsx"
 import { ECHOS } from "@/lib/echos"
+import { PolaroidEcho } from "@/components/PolaroidEcho"
 
 /**
- * Ambient layer of softly drifting ultrasound photos — "herinneringen die
- * rondzweven". Decorative only: placed in the margins / gaps (never behind the
- * headline), blurred and semi-transparent so copy stays crisp. Hidden on small
- * screens to avoid clutter.
+ * A few ultrasound Polaroids softly drifting around the keepsake — like
+ * memories pinned beside it. Decorative; sits behind the content so copy and
+ * the product stay crisp. Hidden on small screens.
  */
-const FLOATERS: { src: string; cls: string }[] = [
-  { src: ECHOS[1], cls: "right-[-2rem] top-[9%] h-20 w-20 rotate-6 opacity-60 blur-[2px] animate-float" },
-  { src: ECHOS[2], cls: "left-[41%] top-[-1.5rem] h-16 w-16 -rotate-6 opacity-50 blur-[2.5px] animate-float-slow" },
-  { src: ECHOS[3], cls: "right-[3%] bottom-[-1.75rem] h-24 w-24 -rotate-3 opacity-60 blur-[1.5px] animate-float-slow" },
-  { src: ECHOS[4], cls: "left-[37%] bottom-[6%] h-[4.5rem] w-[4.5rem] rotate-[9deg] opacity-45 blur-[3px] animate-float" },
+const FLOATERS = [
+  {
+    src: ECHOS[1],
+    caption: "19 weken",
+    pos: "right-[6%] top-[1%] w-28",
+    rotate: "-8deg",
+    anim: "animate-float",
+    delay: "0s",
+    opacity: "opacity-95",
+  },
+  {
+    src: ECHOS[3],
+    caption: "ons kleintje",
+    pos: "left-[39%] bottom-[5%] w-24",
+    rotate: "6deg",
+    anim: "animate-float-slow",
+    delay: "1.3s",
+    opacity: "opacity-90",
+  },
+  {
+    src: ECHOS[4],
+    caption: "12 mei",
+    pos: "right-[2%] bottom-[6%] w-[6.5rem]",
+    rotate: "5deg",
+    anim: "animate-float",
+    delay: "2.4s",
+    opacity: "opacity-80",
+  },
 ]
 
 export function FloatingEchos() {
@@ -22,11 +46,10 @@ export function FloatingEchos() {
       {FLOATERS.map((f, i) => (
         <div
           key={i}
-          className={`absolute overflow-hidden rounded-2xl border border-white/25 bg-night shadow-card ${f.cls}`}
-          style={{ animationDelay: `${i * 1.4}s` }}
+          className={clsx("absolute", f.pos, f.anim, f.opacity)}
+          style={{ animationDelay: f.delay }}
         >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={f.src} alt="" className="h-full w-full object-cover" />
+          <PolaroidEcho src={f.src} caption={f.caption} rotate={f.rotate} />
         </div>
       ))}
     </div>
