@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { ArrowRight, Star } from "lucide-react"
 import { StatuePreview } from "@/components/StatuePreview"
+import { HERO_ECHO } from "@/lib/echos"
 
 export function Hero() {
   return (
@@ -64,8 +65,18 @@ export function Hero() {
             <div className="pointer-events-none absolute -inset-4 animate-spin-slow rounded-full bg-aurora opacity-[0.18] blur-3xl" />
             <div className="glass relative aspect-[4/5] overflow-hidden rounded-[2.25rem] shadow-glow">
               <StatuePreview colorId="gold" finishId="gloss" />
+              {/* the source scan, tucked into the corner */}
+              <div className="absolute left-4 top-4 flex items-center gap-2 rounded-2xl border border-white/15 bg-night/55 p-1.5 pr-3 backdrop-blur">
+                <span className="h-11 w-11 overflow-hidden rounded-xl">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={HERO_ECHO} alt="Jouw 3D-echo" className="h-full w-full object-cover" />
+                </span>
+                <span className="text-[11px] font-medium leading-tight text-ivory/90">
+                  jouw echo
+                </span>
+              </div>
               <div className="absolute bottom-5 left-5 rounded-full border border-white/15 bg-night/50 px-4 py-2 text-xs font-medium tracking-wide text-ivory backdrop-blur">
-                Jouw echo · in 3D
+                Met de hand · in 3D
               </div>
             </div>
           </div>

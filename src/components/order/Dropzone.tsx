@@ -5,6 +5,7 @@ import { UploadCloud, ImageIcon, RefreshCw, Trash2, Lock } from "lucide-react"
 import { clsx } from "clsx"
 import type { UploadedImage } from "@/lib/types"
 import { formatBytes } from "@/lib/format"
+import { ECHOS } from "@/lib/echos"
 
 const MAX_BYTES = 15 * 1024 * 1024
 
@@ -127,6 +128,24 @@ export function Dropzone({
       <p className="mt-4 flex items-center justify-center gap-2 text-xs text-ink-muted">
         <Lock size={13} /> Je foto wordt privé verwerkt en nooit gedeeld.
       </p>
+
+      {/* reassurance: imperfect scans are welcome */}
+      <div className="mt-6 flex flex-col items-center gap-3 rounded-2xl border border-white/50 bg-white/40 p-4 backdrop-blur">
+        <p className="text-xs text-ink-soft">
+          Ook wazige of gedraaide echo&apos;s werken prima — zoals deze:
+        </p>
+        <div className="flex gap-2">
+          {ECHOS.slice(0, 5).map((src) => (
+            <span
+              key={src}
+              className="h-12 w-12 overflow-hidden rounded-lg border border-white/40 bg-night"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={src} alt="Voorbeeld-echo" className="h-full w-full object-cover" />
+            </span>
+          ))}
+        </div>
+      </div>
 
       <input
         ref={inputRef}
