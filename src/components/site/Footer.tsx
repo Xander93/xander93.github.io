@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { Instagram } from "lucide-react"
 import { Wordmark } from "./Wordmark"
 
 export function Footer() {
@@ -11,6 +12,31 @@ export function Footer() {
             Handgemaakte 3D-beeldjes van je echo. Met zorg ontworpen en met de
             hand afgewerkt in ons atelier in Amsterdam.
           </p>
+          <div className="mt-5 flex items-center gap-2.5">
+            <span className="text-xs font-medium uppercase tracking-luxe text-ink-muted">
+              Volg ons
+            </span>
+            <a
+              href="https://instagram.com/echoprint"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Instagram"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-ink/12 bg-white/60 text-ink-soft transition-colors hover:border-gold/50 hover:text-ink"
+            >
+              <Instagram size={17} />
+            </a>
+            <a
+              href="https://tiktok.com/@echoprint"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="TikTok"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-ink/12 bg-white/60 text-ink-soft transition-colors hover:border-gold/50 hover:text-ink"
+            >
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden>
+                <path d="M16.5 3c.32 2.2 1.86 3.9 4 4.2v2.86c-1.4 0-2.78-.42-4-1.12v5.74a5.7 5.7 0 1 1-5.7-5.7c.3 0 .6.02.9.07v2.94a2.8 2.8 0 1 0 1.96 2.69V3h2.84z" />
+              </svg>
+            </a>
+          </div>
         </div>
 
         <div>
