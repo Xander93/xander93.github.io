@@ -252,7 +252,7 @@ function Review({
       </div>
 
       <div className="card flex flex-col rounded-3xl p-6 shadow-card">
-        <h3 className="font-display text-2xl text-ink">Het Geheugenbeeldje</h3>
+        <h3 className="font-display text-2xl text-ink">Jouw 3D-echobeeldje</h3>
         <dl className="mt-4 space-y-2.5 text-sm">
           <Row label="Formaat" value={`${size?.label} · ${size?.dimension}`} />
           <Row label="Kleur" value={color?.label ?? "—"} />
@@ -276,7 +276,8 @@ function Review({
 
         <div className="mt-5 flex items-center gap-2 rounded-2xl bg-ivory-200/70 px-4 py-3 text-xs text-ink-soft">
           <ShieldCheck size={16} className="shrink-0 text-sage" />
-          Handgemaakt in 2–3 weken · je foto blijft privé.
+          Klaar in 5–6 werkdagen · vandaag besteld, morgen in productie · je foto
+          blijft altijd privé.
         </div>
       </div>
     </div>
@@ -331,7 +332,7 @@ function Confirmation({
               />
             )}
             <div className="text-sm">
-              <p className="font-medium text-ink">Het Geheugenbeeldje</p>
+              <p className="font-medium text-ink">Jouw 3D-echobeeldje</p>
               <p className="text-ink-muted">
                 {size?.label} · {color?.label} · {finish?.label}
               </p>

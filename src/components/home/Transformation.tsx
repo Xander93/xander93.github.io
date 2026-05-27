@@ -7,7 +7,7 @@ export function Transformation() {
     <section className="container-luxe scroll-mt-24 py-20 sm:py-28">
       <div className="mx-auto max-w-2xl text-center">
         <span className="eyebrow">
-          <Sparkles size={13} /> Van scan naar sculptuur
+          <Sparkles size={13} /> Zo werkt het
         </span>
         <h2 className="mt-4 text-4xl font-medium text-ink sm:text-5xl">
           Van jouw echo naar jouw beeldje
@@ -33,9 +33,9 @@ export function Transformation() {
           <div className="flex flex-col items-center gap-2 rounded-2xl border border-white/55 bg-white/45 px-5 py-4 text-center shadow-glass backdrop-blur-xl">
             <Hand size={20} className="text-violet" strokeWidth={1.6} />
             <span className="text-xs font-medium text-ink">
-              Met de hand
+              In 3D gebracht
               <br />
-              verfijnd &amp; gesculpteerd
+              &amp; met de hand afgewerkt
             </span>
             <ArrowRight className="text-gold lg:block" size={20} />
           </div>
@@ -55,9 +55,10 @@ export function Transformation() {
               Geen perfecte foto nodig
             </h3>
             <p className="mt-3 text-ink-soft">
-              Wazig, gedraaid, donker of met tekst van het ziekenhuis erop? Elke
-              echo is welkom. Onze artiesten retoucheren je scan met de hand tot
-              een zuivere, zachte vorm — twijfel je, stuur er gerust meerdere.
+              Wazig, gedraaid, donker of met ziekenhuistekst erop? Elke echo is
+              welkom. Onze krachtige techniek analyseert je foto tot op
+              micro-niveau en haalt er een zuivere, zachte vorm uit — twijfel je,
+              stuur er gerust meerdere.
             </p>
           </div>
           <div className="grid grid-cols-3 gap-3 sm:grid-cols-6 lg:grid-cols-3 xl:grid-cols-6">

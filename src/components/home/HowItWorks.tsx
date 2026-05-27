@@ -1,4 +1,4 @@
-import { Upload, Wand2, Hand, Gift } from "lucide-react"
+import { Upload, Cpu, Hand, Gift } from "lucide-react"
 
 const STEPS = [
   {
@@ -7,19 +7,19 @@ const STEPS = [
     body: "Upload de scan veilig vanaf je telefoon of laptop. Eén foto is genoeg.",
   },
   {
-    icon: Wand2,
-    title: "Wij verfijnen",
-    body: "Onze artiesten retoucheren de scan met de hand tot een zuivere, zachte vorm.",
+    icon: Cpu,
+    title: "Omgezet naar 3D",
+    body: "Onze krachtige machines analyseren je foto tot op micro-niveau en bouwen er een precies 3D-model van — ook van een minder scherpe scan.",
   },
   {
     icon: Hand,
-    title: "Met de hand gemaakt",
-    body: "We sculpteren een 3D-model en printen en werken jouw beeldje stuk voor stuk af.",
+    title: "Met de hand afgewerkt",
+    body: "Je 3D-model wordt geprint en door onze makers stuk voor stuk met de hand nagewerkt.",
   },
   {
     icon: Gift,
     title: "In fluweel bezorgd",
-    body: "Verpakt als een echt erfstuk, verzekerd en getraceerd bij je thuisbezorgd.",
+    body: "In 5–6 werkdagen als cadeau verpakt, verzekerd en met track & trace bezorgd.",
   },
 ]
 
@@ -29,11 +29,11 @@ export function HowItWorks() {
       <div className="mx-auto max-w-2xl text-center">
         <span className="eyebrow">Het atelier</span>
         <h2 className="mt-4 text-4xl font-medium text-ink sm:text-5xl">
-          Van vluchtig beeld naar tastbaar erfstuk
+          Van vluchtig beeld naar iets om vast te houden
         </h2>
         <p className="mt-4 text-ink-soft">
-          Geen automatisering, geen haast. Elk beeldje gaat door de handen van
-          onze makers.
+          Geavanceerde 3D-techniek én vakmanschap — we brengen je echo tot
+          leven en werken elk beeldje met de hand af. Klaar in 5–6 werkdagen.
         </p>
       </div>
 

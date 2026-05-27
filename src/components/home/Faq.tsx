@@ -3,15 +3,15 @@ import { Plus } from "lucide-react"
 const FAQS = [
   {
     q: "Welke echo-foto werkt het best?",
-    a: "Een heldere 2D- of 3D-echo waarop het profiel goed zichtbaar is. Twijfel je? Upload gerust meerdere — wij kiezen samen met jou de mooiste.",
+    a: "Een 2D- of 3D-echo waarop het gezichtje of profiel zichtbaar is. Onze techniek analyseert je foto tot op micro-niveau, dus ook een wat minder scherpe scan werkt vaak prima. Twijfel je? Stuur er gerust meerdere — we kiezen samen de mooiste.",
   },
   {
     q: "Is mijn foto privé?",
     a: "Altijd. Je beeld wordt versleuteld en privé opgeslagen, alleen gebruikt om jouw beeldje te maken en nooit gedeeld of openbaar getoond.",
   },
   {
-    q: "Hoe lang duurt het?",
-    a: "Omdat alles met de hand gebeurt, maken we je beeldje in 2 tot 3 weken. Je ontvangt onderweg updates over elke productiestap.",
+    q: "Hoe snel heb ik het in huis?",
+    a: "We gaan meteen voor je aan de slag: bestel je vandaag, dan staat je beeldje morgen al in productie. Gemiddeld is het klaar in 5–6 werkdagen, en je krijgt onderweg updates bij elke stap.",
   },
   {
     q: "Kan ik een naam of datum graveren?",
@@ -19,7 +19,7 @@ const FAQS = [
   },
   {
     q: "Waarvan wordt het beeldje gemaakt?",
-    a: "Van een hoogwaardige, matte composiet die warm aanvoelt in de hand. Beschikbaar in vier kleuren en drie afwerkingen.",
+    a: "Van een hoogwaardig, duurzaam materiaal met een fijne matte afwerking — licht, sterk en warm in de hand. Beschikbaar in vier kleuren en drie afwerkingen.",
   },
 ]
 

@@ -20,7 +20,7 @@ const sans = Inter({
 export const metadata: Metadata = {
   title: "EchoPrint — Een tastbare herinnering aan je eerste echo",
   description:
-    "Van je echo naar een met de hand afgewerkt 3D-beeldje. Een luxe keepsake van het moment waarop alles veranderde.",
+    "Van je echo naar een met de hand gemaakt 3D-beeldje. Een blijvende herinnering aan het moment waarop alles veranderde.",
 }
 
 export default function RootLayout({

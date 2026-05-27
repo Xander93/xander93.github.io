@@ -1,3 +1,6 @@
+const HEART =
+  "M16 28.8C6.9 22.2 2.8 17.4 2.8 11.9 2.8 8 5.7 5 9.4 5 11.8 5 14 6.3 16 8.7 18 6.3 20.2 5 22.6 5 26.3 5 29.2 8 29.2 11.9 29.2 17.4 25.1 22.2 16 28.8Z"
+
 export function Wordmark({
   className = "",
   light = false,
@@ -7,35 +10,29 @@ export function Wordmark({
 }) {
   return (
     <span className={`flex items-center gap-2.5 ${className}`}>
-      <span className="relative inline-flex h-9 w-9 items-center justify-center overflow-hidden rounded-full shadow-glow-gold">
-        <svg viewBox="0 0 36 36" className="h-full w-full" aria-hidden>
-          <defs>
-            <linearGradient id="wm-g" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stopColor="#F1CF96" />
-              <stop offset="52%" stopColor="#E0AE68" />
-              <stop offset="100%" stopColor="#E9C7BE" />
-            </linearGradient>
-          </defs>
-          <circle cx="18" cy="18" r="18" fill="url(#wm-g)" />
-          {/* soft top sheen */}
-          <ellipse cx="18" cy="11" rx="16" ry="9" fill="#ffffff" opacity="0.16" />
-          {/* a sweet, soft heart */}
-          <path
-            d="M18 26.6C9.6 20.7 6.1 16.3 6.1 12.3 6.1 9.2 8.6 6.8 11.6 6.8 14 6.8 16 8.2 18 10.8 20 8.2 22 6.8 24.4 6.8 27.4 6.8 29.9 9.2 29.9 12.3 29.9 16.3 26.4 20.7 18 26.6Z"
-            fill="#ffffff"
-          />
-          {/* tiny highlight for a soft, glossy feel */}
-          <ellipse
-            cx="13"
-            cy="12"
-            rx="2.6"
-            ry="1.7"
-            fill="#ffffff"
-            opacity="0.55"
-            transform="rotate(-28 13 12)"
-          />
-        </svg>
-      </span>
+      <svg
+        viewBox="0 0 32 30"
+        className="h-9 w-9 drop-shadow-[0_5px_14px_rgba(224,174,104,0.5)]"
+        aria-hidden
+      >
+        <defs>
+          <linearGradient id="wm-g" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stopColor="#F1CF96" />
+            <stop offset="52%" stopColor="#E0AE68" />
+            <stop offset="100%" stopColor="#E9C7BE" />
+          </linearGradient>
+          {/* cut a smaller heart out of the big heart */}
+          <mask id="wm-cut">
+            <rect x="0" y="0" width="32" height="30" fill="#fff" />
+            <path
+              d={HEART}
+              transform="translate(16 13) scale(0.4) translate(-16 -13)"
+              fill="#000"
+            />
+          </mask>
+        </defs>
+        <path d={HEART} fill="url(#wm-g)" mask="url(#wm-cut)" />
+      </svg>
       <span
         className={`font-display text-[20px] font-semibold leading-none tracking-tightish ${
           light ? "text-white" : "text-ink"
