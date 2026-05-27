@@ -4,7 +4,7 @@ import Link from "next/link"
 import { useState } from "react"
 import { ArrowRight, Check, Ruler, Sparkles } from "lucide-react"
 import { clsx } from "clsx"
-import { StatuePreview } from "@/components/StatuePreview"
+import { RoomScene } from "@/components/RoomScene"
 import { COLORS, SIZES, findSize } from "@/lib/products"
 import { formatPrice } from "@/lib/format"
 
@@ -45,7 +45,7 @@ export function Materials() {
             <div className="relative mx-auto w-full max-w-[200px] sm:max-w-[250px] lg:max-w-sm">
               <div className="pointer-events-none absolute -inset-6 animate-pulse-glow rounded-full bg-palantir opacity-70 blur-2xl" />
               <div className="glass relative aspect-[4/5] overflow-hidden rounded-[1.75rem] shadow-glow lg:rounded-[2.25rem]">
-                <StatuePreview colorId={colorId} finishId="gloss" />
+                <RoomScene colorId={colorId} sizeId={sizeId} />
                 <span className="absolute bottom-4 left-4 rounded-full border border-white/15 bg-night/55 px-3.5 py-1.5 text-xs font-semibold text-ivory backdrop-blur">
                   {size?.dimension} hoog
                 </span>

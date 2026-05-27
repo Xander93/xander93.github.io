@@ -102,6 +102,10 @@ const config: Config = {
           "0%,100%": { boxShadow: "0 0 0 0 rgba(224,174,104,0)" },
           "50%": { boxShadow: "0 0 16px 0 rgba(224,174,104,0.38)" },
         },
+        marquee: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
       },
       animation: {
         "fade-up": "fade-up 0.8s cubic-bezier(0.22,1,0.36,1) both",
@@ -112,6 +116,7 @@ const config: Config = {
         "spin-slow": "spin-slow 38s linear infinite",
         shimmer: "shimmer 6s linear infinite",
         "glow-pulse": "glow-pulse 3.6s ease-in-out infinite",
+        marquee: "marquee 46s linear infinite",
       },
     },
   },
