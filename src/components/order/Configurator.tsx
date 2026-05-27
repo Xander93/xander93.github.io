@@ -1,7 +1,7 @@
 "use client"
 
 import { clsx } from "clsx"
-import { Check } from "lucide-react"
+import { Check, Sparkles } from "lucide-react"
 import { StatuePreview } from "@/components/StatuePreview"
 import {
   COLORS,
@@ -124,28 +124,12 @@ export function Configurator({
           </div>
         </Field>
 
-        {/* Finish */}
-        <Field label="Afwerking" value={finish?.description}>
-          <div className="flex flex-wrap gap-2.5">
-            {FINISHES.map((f) => {
-              const active = config.finishId === f.id
-              return (
-                <button
-                  key={f.id}
-                  onClick={() => onChange({ ...config, finishId: f.id })}
-                  className={clsx(
-                    "rounded-full border px-5 py-2 text-sm transition-all",
-                    active
-                      ? "border-ink bg-ink text-ivory"
-                      : "border-ink/15 bg-white/60 text-ink-soft hover:border-ink/30"
-                  )}
-                >
-                  {f.label}
-                </button>
-              )
-            })}
-          </div>
-        </Field>
+        {/* Finish — fixed high gloss (vapor-smoothed), shown not chosen */}
+        <div className="flex items-center gap-2 rounded-2xl border border-ink/10 bg-white/50 px-4 py-3 text-sm text-ink-soft">
+          <Sparkles size={15} className="shrink-0 text-gold-dark" />
+          Afwerking: handgepolijste{" "}
+          <span className="font-medium text-ink">hoogglans</span>
+        </div>
 
         {/* Engraving */}
         <Field label="Gravure" optional>

@@ -19,16 +19,13 @@ const FAQS = [
   },
   {
     q: "Waarvan wordt het beeldje gemaakt?",
-    a: "Van een hoogwaardig, duurzaam materiaal met een fijne matte afwerking. Licht, sterk en warm in de hand. Beschikbaar in vier kleuren en drie afwerkingen.",
+    a: "Van een hoogwaardig, duurzaam materiaal, met de hand afgewerkt tot een rijke hoogglans. Licht, sterk en warm in de hand, en verkrijgbaar in vier kleuren.",
   },
 ]
 
 export function Faq() {
   return (
-    <section
-      id="faq"
-      className="scroll-mt-24 border-t border-ink/[0.06] bg-ivory-200/50 py-20 sm:py-28"
-    >
+    <section id="faq" className="scroll-mt-24 py-20 sm:py-28">
       <div className="container-luxe grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
         <div>
           <span className="eyebrow">Goed om te weten</span>
