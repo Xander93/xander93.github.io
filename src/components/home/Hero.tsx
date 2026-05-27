@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowRight, Star, Zap } from "lucide-react"
+import { ArrowRight, Star, Zap, Truck } from "lucide-react"
 import { StatuePreview } from "@/components/StatuePreview"
 import { FloatingEchos } from "@/components/FloatingEchos"
 import { PolaroidEcho } from "@/components/PolaroidEcho"
@@ -20,7 +20,7 @@ export function Hero() {
         <div className="animate-fade-up">
           <span className="eyebrow">
             <span className="h-1.5 w-1.5 rounded-full bg-gradient-to-br from-gold to-blush-deep" />
-            Handgemaakte 3D-beeldjes van je echo
+            Handgemaakt in 3D
           </span>
           <h1 className="mt-6 font-display text-[2.7rem] font-semibold leading-[1.02] tracking-tightish text-ink sm:text-6xl">
             Houd het allereerste{" "}
@@ -44,11 +44,21 @@ export function Hero() {
           </div>
 
           <div className="mt-5 flex flex-wrap items-center gap-3">
-            <span className="inline-flex items-center gap-2 rounded-full bg-gold/15 px-4 py-2 text-sm font-bold text-gold-dark ring-1 ring-gold/30">
-              <Zap size={15} fill="currentColor" strokeWidth={0} />
-              Vandaag besteld = morgen in productie
+            <span className="relative inline-flex items-center gap-2 overflow-hidden rounded-full border border-gold/40 bg-gold/15 px-4 py-2 text-sm font-bold text-gold-dark animate-glow-pulse">
+              <span
+                aria-hidden
+                className="animate-shine pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-transparent via-white/70 to-transparent"
+              />
+              <Zap
+                size={15}
+                fill="currentColor"
+                strokeWidth={0}
+                className="relative animate-pulse"
+              />
+              <span className="relative">Vandaag besteld = morgen in productie</span>
             </span>
-            <span className="text-sm font-medium text-ink-soft">
+            <span className="inline-flex items-center gap-2 rounded-full border border-ink/12 bg-white/55 px-4 py-2 text-sm font-medium text-ink-soft backdrop-blur">
+              <Truck size={15} className="text-ink-muted" />
               Klaar in 5–6 werkdagen
             </span>
           </div>
@@ -70,12 +80,12 @@ export function Hero() {
               ))}
             </div>
             <div className="text-sm text-ink-soft">
-              <div className="flex text-gold">
+              <div className="flex gap-0.5 text-gold">
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} size={14} fill="currentColor" strokeWidth={0} />
+                  <Star key={i} size={17} fill="currentColor" strokeWidth={0} />
                 ))}
               </div>
-              <span>Al 30+ blije ouders gingen je voor</span>
+              <span className="mt-0.5 block">Al 30+ blije ouders</span>
             </div>
           </div>
         </div>

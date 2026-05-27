@@ -40,7 +40,7 @@
   }
 
   .eyebrow {
-    @apply inline-flex items-center gap-2 rounded-full border border-violet/25 bg-white/45 px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-luxe text-violet-dark backdrop-blur;
+    @apply inline-flex items-center gap-2 rounded-full border border-gold/30 bg-white/55 px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-luxe text-gold-dark backdrop-blur;
   }
 
   .text-gradient {

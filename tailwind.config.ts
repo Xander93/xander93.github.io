@@ -98,6 +98,20 @@ const config: Config = {
           "0%": { backgroundPosition: "0% 50%" },
           "100%": { backgroundPosition: "200% 50%" },
         },
+        "glow-pulse": {
+          "0%,100%": {
+            boxShadow:
+              "0 0 0 0 rgba(224,174,104,0), 0 6px 18px -6px rgba(224,174,104,0.45)",
+          },
+          "50%": {
+            boxShadow:
+              "0 0 0 5px rgba(224,174,104,0.14), 0 12px 26px -6px rgba(224,174,104,0.8)",
+          },
+        },
+        shine: {
+          "0%": { transform: "translateX(-120%) skewX(-12deg)" },
+          "55%,100%": { transform: "translateX(260%) skewX(-12deg)" },
+        },
       },
       animation: {
         "fade-up": "fade-up 0.8s cubic-bezier(0.22,1,0.36,1) both",
@@ -107,6 +121,8 @@ const config: Config = {
         "pulse-glow": "pulse-glow 7s ease-in-out infinite",
         "spin-slow": "spin-slow 38s linear infinite",
         shimmer: "shimmer 6s linear infinite",
+        "glow-pulse": "glow-pulse 2.6s ease-in-out infinite",
+        shine: "shine 3.4s ease-in-out infinite",
       },
     },
   },
