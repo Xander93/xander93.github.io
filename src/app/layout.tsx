@@ -26,7 +26,7 @@ const hand = Caveat({
 })
 
 export const metadata: Metadata = {
-  title: "EchoPrint — Een tastbare herinnering aan je eerste echo",
+  title: "EchoPrint · Een tastbare herinnering aan je eerste echo",
   description:
     "Van je echo naar een met de hand gemaakt 3D-beeldje. Een blijvende herinnering aan het moment waarop alles veranderde.",
 }

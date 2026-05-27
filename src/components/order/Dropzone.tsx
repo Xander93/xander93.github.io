@@ -24,7 +24,7 @@ export function Dropzone({
     setError(null)
     if (!file) return
     if (!file.type.startsWith("image/")) {
-      setError("Kies een afbeelding — JPG, PNG of WEBP.")
+      setError("Kies een afbeelding: JPG, PNG of WEBP.")
       return
     }
     if (file.size > MAX_BYTES) {
@@ -132,7 +132,7 @@ export function Dropzone({
       {/* reassurance: imperfect scans are welcome */}
       <div className="mt-6 flex flex-col items-center gap-3 rounded-2xl border border-white/50 bg-white/40 p-4 backdrop-blur">
         <p className="text-xs text-ink-soft">
-          Ook wazige of gedraaide echo&apos;s werken prima — zoals deze:
+          Ook wazige of gedraaide echo&apos;s werken prima, zoals deze:
         </p>
         <div className="flex gap-2">
           {ECHOS.slice(0, 5).map((src) => (

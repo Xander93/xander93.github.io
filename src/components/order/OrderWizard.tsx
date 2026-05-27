@@ -255,8 +255,8 @@ function Review({
         <h3 className="font-display text-2xl text-ink">Jouw 3D-echobeeldje</h3>
         <dl className="mt-4 space-y-2.5 text-sm">
           <Row label="Formaat" value={`${size?.label} · ${size?.dimension}`} />
-          <Row label="Kleur" value={color?.label ?? "—"} />
-          <Row label="Afwerking" value={finish?.label ?? "—"} />
+          <Row label="Kleur" value={color?.label ?? "Geen"} />
+          <Row label="Afwerking" value={finish?.label ?? "Geen"} />
           <Row
             label="Gravure"
             value={config.engraving.trim() ? `“${config.engraving}”` : "Geen"}
@@ -313,7 +313,7 @@ function Confirmation({
           <Sparkles size={28} />
         </span>
         <h1 className="mt-6 font-display text-4xl font-medium text-ink sm:text-5xl">
-          Bedankt — we gaan voor je aan de slag
+          Bedankt! We gaan voor je aan de slag
         </h1>
         <p className="mt-4 text-ink-soft">
           Je beeldje is in goede handen. We sturen je updates bij elke stap: van

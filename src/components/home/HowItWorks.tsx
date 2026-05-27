@@ -9,7 +9,7 @@ const STEPS = [
   {
     icon: Cpu,
     title: "Omgezet naar 3D",
-    body: "Onze krachtige machines analyseren je foto tot op micro-niveau en bouwen er een precies 3D-model van — ook van een minder scherpe scan.",
+    body: "Onze krachtige machines analyseren je foto tot op micro-niveau en bouwen er een precies 3D-model van, ook van een minder scherpe scan.",
   },
   {
     icon: Hand,
@@ -32,8 +32,8 @@ export function HowItWorks() {
           Van vluchtig beeld naar iets om vast te houden
         </h2>
         <p className="mt-4 text-ink-soft">
-          Geavanceerde 3D-techniek én vakmanschap — we brengen je echo tot
-          leven en werken elk beeldje met de hand af. Klaar in 5–6 werkdagen.
+          Geavanceerde 3D-techniek én vakmanschap. We brengen je echo tot leven
+          en werken elk beeldje met de hand af. Klaar in 5–6 werkdagen.
         </p>
       </div>
 

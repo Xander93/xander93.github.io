@@ -32,8 +32,8 @@ export function FinalCta() {
             Een herinnering die je in je handen kunt houden
           </h2>
           <p className="mt-5 text-ivory-300/80">
-            Het duurt twee minuten om te beginnen. Wij doen de rest — met de
-            hand, met zorg.
+            Het duurt twee minuten om te beginnen. Wij doen de rest, met de
+            hand en met zorg.
           </p>
           <Link href="/bestellen" className="btn-gold mt-9">
             Maak jouw beeldje <ArrowRight size={18} />

@@ -14,7 +14,7 @@ export function Transformation() {
           Van jouw echo naar jouw beeldje
         </h2>
         <p className="mt-4 text-ink-soft">
-          We werken altijd vanaf jóuw scan — die ene foto waarop je voor het
+          We werken altijd vanaf jóuw scan: die ene foto waarop je voor het
           eerst je kindje zag.
         </p>
       </div>
@@ -58,8 +58,8 @@ export function Transformation() {
             <p className="mt-3 text-ink-soft">
               Wazig, gedraaid, donker of met ziekenhuistekst erop? Elke echo is
               welkom. Onze krachtige techniek analyseert je foto tot op
-              micro-niveau en haalt er een zuivere, zachte vorm uit — twijfel je,
-              stuur er gerust meerdere.
+              micro-niveau en haalt er een zuivere, zachte vorm uit. Twijfel je?
+              Stuur er gerust meerdere.
             </p>
           </div>
           <div className="grid grid-cols-3 gap-3 sm:grid-cols-6 lg:grid-cols-3 xl:grid-cols-6">

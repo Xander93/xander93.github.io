@@ -3,7 +3,7 @@ import { Plus } from "lucide-react"
 const FAQS = [
   {
     q: "Welke echo-foto werkt het best?",
-    a: "Een 2D- of 3D-echo waarop het gezichtje of profiel zichtbaar is. Onze techniek analyseert je foto tot op micro-niveau, dus ook een wat minder scherpe scan werkt vaak prima. Twijfel je? Stuur er gerust meerdere — we kiezen samen de mooiste.",
+    a: "Een 2D- of 3D-echo waarop het gezichtje of profiel zichtbaar is. Onze techniek analyseert je foto tot op micro-niveau, dus ook een wat minder scherpe scan werkt vaak prima. Twijfel je? Stuur er gerust meerdere, dan kiezen we samen de mooiste.",
   },
   {
     q: "Is mijn foto privé?",
@@ -15,11 +15,11 @@ const FAQS = [
   },
   {
     q: "Kan ik een naam of datum graveren?",
-    a: "Ja. Voeg een korte tekst toe — een naam, geboortedatum of een woord dat blijft — subtiel gegraveerd in de voet.",
+    a: "Ja. Voeg een korte tekst toe: een naam, geboortedatum of een woord dat blijft, subtiel gegraveerd in de voet.",
   },
   {
     q: "Waarvan wordt het beeldje gemaakt?",
-    a: "Van een hoogwaardig, duurzaam materiaal met een fijne matte afwerking — licht, sterk en warm in de hand. Beschikbaar in vier kleuren en drie afwerkingen.",
+    a: "Van een hoogwaardig, duurzaam materiaal met een fijne matte afwerking. Licht, sterk en warm in de hand. Beschikbaar in vier kleuren en drie afwerkingen.",
   },
 ]
 
@@ -37,7 +37,7 @@ export function Faq() {
           </h2>
           <p className="mt-4 max-w-sm text-ink-soft">
             Nog een vraag? Mail ons gerust op{" "}
-            <span className="text-ink">hallo@echoprint.nl</span> — we denken
+            <span className="text-ink">hallo@echoprint.nl</span>, we denken
             graag met je mee.
           </p>
         </div>
